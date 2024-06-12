@@ -2,6 +2,8 @@ import React,{ useRef,useEffect,useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'; // Correct import
 import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; // Correct import
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 import './HomePage.css';
 import logo from './logo.png';
 import bg from './bg.png';
@@ -213,10 +215,25 @@ No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimenta
                             </div>
                         </div>
 
-                        <div className="custom-image-container-2">
-                            <img src={comentarios} alt="Background" className="custom-scrolling-image-2" ref={imgRef2} />
-                            
-                        </div>
+                        <div className="testimonials-container">
+      <h2>Comentarios de la Comunidad</h2>
+      <div className="testimonials-wrapper">
+        <div className="testimonial-box">
+          <p>Tal como fui enseñado desde que tengo memoria y Agua Viva me ha enfatizado: el bien emana del propio interior de cada uno.</p>
+          <p>¡Esto me cambió la vida!</p>
+          <p className="author">Jesús M.</p>
+        </div>
+        <div className="testimonial-box highlighted">
+          <p>Es fácil vivir auto engañados; tener una vida mediocre, trabajar, gastarse el dinero en alcohol para sentirse mejor de nuestra vida, sin arreglar nada, solo provocando momentos esporádicos de felicidad, pero con vacío existencial.</p>
+          <p>Gracias a que me permití invertir tiempo en mí hoy puedo entenderme mejor y vivir feliz.</p>
+          <p className="author">Jonathan S.</p>
+        </div>
+        <div className="testimonial-box">
+          <p>Gracias a Agua Viva el día de hoy ya no sufro de ataques de ansiedad, pude mantener mi matrimonio, y encontré esa seguridad en mí que me permite construir la vida que siempre quise.</p>
+          <p className="author">Óscar B.</p>
+        </div>
+      </div>
+    </div>
                         <div className="experience-container">
             <div className="left-column">
                 <div className="step">
@@ -251,9 +268,32 @@ No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimenta
             </div>
         </div>
                 </div>
-
+                <footer className="footer">
+        <div className="footer-content">
+          <h3>Sempre habrá alguien para escucharte. Ya no estás solo.</h3>
+          <div className="contact-options">
+            <div className="contact-option">
+              <FontAwesomeIcon icon={faWhatsapp} size="3x" />
+              <p>Whatsapp</p>
+              <p>Envíanos un Whatsapp</p>
             </div>
-            
+            <div className="contact-option">
+              <FontAwesomeIcon icon={faEnvelope} size="3x" />
+              <p>Email</p>
+              <p>Te contestaremos tan rápido como podamos</p>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>Copyright © 2023 Agua Viva Grupos Anónimos de Autoayuda</p>
+          <div className="social-icons">
+            <FontAwesomeIcon icon={faFacebook} size="2x" />
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
+          </div>
+        </div>
+      </footer>
+            </div>
+    
             </main>
         </div>
     );
