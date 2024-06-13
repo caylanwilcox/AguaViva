@@ -211,7 +211,7 @@ learn-more-buton">Conocer más</button>
                             <div className="custom-content-overlay">
                                 <h2>¿Por qué lo hacemos?</h2>
                                 <p>Nos dimos cuenta de que entregarnos a otros seres humanos sin esperar nada a cambio, nos ayudaba a recuperarnos y mantenernos sobrios un día a la vez.</p>
-                                <a href="#" id="testimonios" lassName="custom-btn">Saber más</a>
+                                <a href="#" id="testimonios" className="custom-btn">Saber más</a>
                             </div>
                         </section>
                         <section  className="testimonials-container">
