@@ -153,7 +153,7 @@ const HomePage = () => {
                         <div className="quesomos-section">
                             <div className="quesomos-container">
                                 <div className='section11'>
-                                    <h2>Un día a la vez</h2>
+                                    <h2 >Un día a la vez</h2>
                                     <p>Somos un grupo anónimo de autoayuda sin fines de lucro dedicado a trabajar
                                         y entender diversos síntomas y malestares de la enfermedad emocional, tales
                                         como neurosis, depresión, ansiedad, codependencia, desórdenes alimenticios,
@@ -179,9 +179,9 @@ const HomePage = () => {
                         <div className="quesomos-section">
                             <div className="nosomos-container">
                                 <div className='section11'>
-                                    <h4>¿QUÉ NO SOMOS?
+                                    <h4 >¿QUÉ NO SOMOS?
                                     </h4>
-                                    <h2>No somos profesionales, pero sabemos lo que hacemos</h2>
+                                    <h2 className="dia">No somos profesionales, pero sabemos lo que hacemos</h2>
                                     <p>No somos AA, las problemáticas a las que atendemos no se centran únicamente en el consumo de alcohol o drogas, tampoco somos una religión, nuestros miembros son libres de profesar cualquier creencia o credo e incluso de no hacerlo. No somos una secta, si tu, llegas a cualquier grupo de Agua Viva, serás bienvenido, y estarás en toda la libertad de elegir ser o no parte de nuestra comunidad.
 
                                         No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimental, Agua Viva tiene más de 20 años en los cuales hemos logrado influir positivamente en la vida de miles de personas.

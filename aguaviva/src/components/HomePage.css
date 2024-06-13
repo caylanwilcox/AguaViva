@@ -509,7 +509,14 @@ color:rgb(0,85,165);
     text-align: center;
     z-index: 10;
 }
-
+.nav-menu ul{
+    max-width: 100%;
+    text-align: center;
+}
+.nav-menu ul{
+    max-width: 100%;
+    text-align: center;
+}
 .custom-content-overlay h2 {
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -997,11 +1004,11 @@ color:white;
     
     .custom-scrolling-image {
         position: absolute;
-        top: 0;
+        top:-35%;
         left: 50%;
         transform: translateX(-50%);
         width: auto;
-        height:500px;
+        height:800px;
         transition: transform 0.2s ease-out;
     }
     
@@ -1447,26 +1454,32 @@ margin-top: 0px;
       align-items: center;
       height: 600px;
   }
-.section111 p{
+.section11 p{
     text-align: left;
     font-size: 1rem;
+    margin: 40px 10px 20px 10px;
 
 }
     .section11, .section22 {
       width: 100%;
-      margin: 10px 0;
+      margin: 10px ;
     }
   
     .section11 h2 {
-      text-align: left;
-      font-size: 2rem;
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      max-width: 90%;
     }
   
     .section11 p {
       text-align: left;
       font-size: 1rem;
+
     }
-  
+ .quesomos-section .dia {
+    text-align: left;
+  }
     .boardrow {
       flex-direction: column;
       align-items: center;
