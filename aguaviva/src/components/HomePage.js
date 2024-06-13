@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import TypingEffect from './TypingEffect'; // Import the TypingEffect component
+
 import './HomePage.css';
 import logo from './logo.png';
 import bg from './bg.png';
@@ -78,8 +80,21 @@ const HomePage = () => {
                             <div className="left">
                                 <div className="leftheaderContentContainer">
                                     <h4>BIENVENIDO A AGUA VIVA</h4>
-                                    <h1>El sentir vacío existencial tiene una respuesta</h1>
-                                    <p>¿Te vives constantemente en ansiedad, depresión, angustia o frustración?</p>
+                                    <h1>
+                                        <TypingEffect
+                                            texts={[
+                                                "El sentir vacío existencial",
+                                                "Sentirse solo aún estando acompañado",
+                                                "Abandonar tus proyectos por falta de motivación",
+                                                "La angustia de tu apariencia física"
+                                            ]}
+                                            speed={50}
+                                            pause={1000}
+                                            loop
+                                        />
+                                        <br />
+                                     <span> tiene una respuesta </span>  
+                                    </h1>                     <p>¿Te vives constantemente en ansiedad, depresión, angustia o frustración?</p>
                                 </div>
                                 <div className="contact-container">
                                     <div className="contact-options">
@@ -107,7 +122,7 @@ const HomePage = () => {
                         </section>
                     </div>
                     <div className="info-section">
-                        <section id="que-somos" className="info-cards-row">
+                        <section  className="info-cards-row">
                             <div className="info-card">
                                 <img src={liquor} alt="Alcoholismo y drogadicción" />
                                 <h3>Alcoholismo y drogadicción</h3>
@@ -130,7 +145,7 @@ const HomePage = () => {
                                 <p>¿Has abandonado planes o proyectos y no logras retomarlos debido a tu estado emocional?</p>
                             </div>
                         </section>
-                        <section id="que-no-somos" className="info-cards-row">
+                        <section  className="info-cards-row">
                             <div className="info-card2">
                                 <img src={eatingDisorder} alt="Trastornos alimenticios" />
                                 <h3>Trastornos alimenticios</h3>
@@ -145,7 +160,7 @@ const HomePage = () => {
                                 <p>En tu búsqueda de esta aprobación o aceptación de otros, ¿renuncias a lo que tu anhelas o deseas?</p>
                             </div>
                         </section>
-                        <section id="testimonios">
+                        <section >
                             <h2>ENCUENTRA TU GRUPO MÁS CERCANO</h2>
                             <h3>Directorio Agua Viva</h3>
                             <div className="map-container">
@@ -196,10 +211,10 @@ learn-more-buton">Conocer más</button>
                             <div className="custom-content-overlay">
                                 <h2>¿Por qué lo hacemos?</h2>
                                 <p>Nos dimos cuenta de que entregarnos a otros seres humanos sin esperar nada a cambio, nos ayudaba a recuperarnos y mantenernos sobrios un día a la vez.</p>
-                                <a href="#" className="custom-btn">Saber más</a>
+                                <a href="#" id="testimonios" lassName="custom-btn">Saber más</a>
                             </div>
                         </section>
-                        <section id="testimonios" className="testimonials-container">
+                        <section  className="testimonials-container">
                             <h2>Comentarios de la Comunidad</h2>
                             <div className="testimonials-wrapper">
                                 <div className="testimonial-box">
@@ -212,7 +227,7 @@ learn-more-buton">Conocer más</button>
                                     <p>Gracias a que me permití invertir tiempo en mí hoy puedo entenderme mejor y vivir feliz.</p>
                                     <p className="author">Jonathan S.</p>
                                 </div>
-                                <div className="testimonial-box">
+                                <div  className="testimonial-box">
                                     <p>Gracias a Agua Viva el día de hoy ya no sufro de ataques de ansiedad, pude mantener mi matrimonio, y encontré esa seguridad en mí que me permite construir la vida que siempre quise.</p>
                                     <p className="author">Óscar B.</p>
                                 </div>

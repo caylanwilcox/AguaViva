@@ -180,7 +180,7 @@ width: 100%;
     line-height: 24px; /* Line height */
 }
 .intro h1 {
-    font-size: 45px;
+    font-size: 40px;
     font-family: 'Montserrat', sans-serif;
     color: #121212;
     margin: 0 20px 0 0;
@@ -188,6 +188,18 @@ width: 100%;
     font-weight: 500;
     padding:0 0 10px;
     letter-spacing: .05cap;
+
+}
+h1 span{
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #121212;
+    margin: 0 20px 0 0;
+    line-height: 46px;
+    font-weight: 500;
+    padding:0 0 10px;
+    letter-spacing: .05cap;
+    max-width: 2200px;
 
 }
 .intro h4 {
@@ -974,7 +986,7 @@ color:white;
             color:rgb(255, 255, 255);
             font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
         }
-
+    
 @media (max-width: 900px) {
     .custom-image-container {
         position: relative;
@@ -1262,7 +1274,17 @@ color:white;
         max-width: 100%;
     }
     .intro h1 {
-        font-size: 30px;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+        color: #1a1a1a;
+        margin: 0 20px 0 0;
+        line-height: 30px;
+        font-weight: 500;
+        padding:0 0 10px;
+    
+    }
+       .intro h1 span{
+        font-size: 23px;
         font-family: 'Montserrat', sans-serif;
         color: #1a1a1a;
         margin: 0 20px 0 0;
@@ -1411,6 +1433,7 @@ background-repeat: no-repeat;
     font-size: 16px; /* Font size */
     line-height: 24px; /* Line height */
 }
+
 @media (max-width: 900px) {
     .nueva-section{
         align-items: flex-end;
@@ -1572,34 +1595,5 @@ margin-top: 0px;
     }
   }
   
-  @media (max-width: 480px) {
-    .footer-content h2 {
-        font-family: 'Montserrat', sans-serif;
-
-      font-size: 20px;
-      width: 90%;
-    }
   
-    .contacts span{
-        font-size: 20px;
-
-    }
-    .contacts p {
-      font-size: 16px;
-    }
-  
-    .contacts .icon {
-      font-size: 40px;
-    }
-  
-    .footer-bottom {
-      gap: 10px;
-    }
-  
-    .footer-bottom p {
-      padding: 10px;
-    }
-  }
-  
-
 }
