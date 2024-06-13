@@ -882,26 +882,35 @@ line-height: 22px
   }
   .footer {
     background: linear-gradient(90deg, #5CC7EF 0%, #76aee0d1 90%);
-    padding: 40px 20px;
+    padding: 20px 0px 0px 0px;
     color: white;
     text-align: center;
-    width: 100%;
+    max-width: 100%;
+    padding-top: 5% ;
+
   }
   
   .footer-content {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   
-  .footer-content h3 {
+  .footer-content h2 {
     font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    justify-content: center;
+    margin: auto;
+    font-weight: 500;
+    letter-spacing: 0.025cap;;
+    text-align: center;
+    width: 40%;
   }
   
   .contact-options {
     display: flex;
     justify-content: center;
-    gap: 40px;
   }
   
   .contact-option {
@@ -913,27 +922,77 @@ line-height: 22px
   }
   
   .footer-bottom {
+    margin-top: 5%;
+    max-width: 100%;
     background: white;
     color: #333;
-    padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
+font-size: 14px;
+gap: 30px;
   }
   
   .footer-bottom p {
     margin: 0;
+    padding: 30px;
+    font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
     font-size: 14px;
+    
   }
   
   .social-icons {
     display: flex;
+    justify-content: center;
     gap: 10px;
   }
-@media (max-width: 500px) {
+.facebook{
+    color: rgb(49, 125, 255);
+}
+.instagram{
+    color: rgb(227, 69, 69);
+}
+.contacts{
+    margin-top: 50px;
+display: flex;
+gap: 11%;
+justify-content: center;
+color:white;
+
+}
+.contact{
+    max-width: 15%;
+        margin-bottom: 5px;
+
+}
+.contacts span{
+    display: block;
+ text-align: center;
+    color:rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+    .contacts .icon{
+        
+        color:gold;
+        margin-bottom: 20px;
+
+        }
+        .contacts p{
+            margin-top: 10px;
+            font-size: 14px;
+            display: block;
+         text-align: center;
+            color:rgb(255, 255, 255);
+            font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
+        }
+
+@media (max-width: 900px) {
     .custom-image-container {
         position: relative;
-        height: 80vh; /* Set the desired height */
+        height: 60vh; /* Set the desired height */
         overflow: hidden;
     }
     
@@ -941,10 +1000,9 @@ line-height: 22px
         position: absolute;
         top: 0;
         left: 50%;
-        max-width: 400px;
         transform: translateX(-50%);
-        width: 100%;
-        height: auto;
+        width: auto;
+        height:500px;
         transition: transform 0.2s ease-out;
     }
     
@@ -956,9 +1014,9 @@ line-height: 22px
         background: white;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
+        border-radius: 30px;
         max-width: 300px; /* Adjust width as necessary */
-        height: 500px;
+        height: 350px;
         text-align: center;
         z-index: 10;
     }
@@ -966,7 +1024,7 @@ line-height: 22px
     .custom-content-overlay h2 {
         margin-bottom: 10px;
         font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 25px;
     font-weight: 500;
     color:rgb(9, 53, 50);
     line-height: 58px;
@@ -1029,11 +1087,20 @@ line-height: 22px
             padding: 20px;
         }
     
-        .left-column, .right-column {
+        .left-column{
             align-content: center;
             width:80%;
             padding-right: 0px;
             text-align: left;
+            padding-left: -30px;
+        }
+        
+        .right-column {
+            align-content: center;
+            width:80%;
+            padding-right: 0px;
+            text-align: left;
+            padding-left: 0px;
         }
     
         .step {
@@ -1047,7 +1114,7 @@ line-height: 22px
         }
     }
     
-    @media (max-width: 480px) {
+    @media (max-width: 900px) {
         .header h1 {
             font-size: 28px;
         }
@@ -1357,7 +1424,7 @@ background-repeat: no-repeat;
     font-size: 16px; /* Font size */
     line-height: 24px; /* Line height */
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .nueva-section{
         align-items: flex-end;
     height: 800px;
@@ -1374,7 +1441,7 @@ background-repeat: no-repeat;
     }
   .nosomos-container{
     text-align: left;
-
+margin-top: 0px;
     width: 90%;
       height: auto;
       flex-direction: column;
@@ -1468,5 +1535,78 @@ background-repeat: no-repeat;
     font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
     font-size: 16px; /* Font size */
     font-weight: 300; /* Font weight */
-}
+}@media (max-width: 768px) {
+    .left-column{
+        max-width: 100%;
+    }
+    footer{
+        border-radius: 20px;
+       max-width: 100%;
+       margin: 0;
+    }
+    .footer-content h2 {
+      font-size: 20px;
+
+      width: 80%;
+    }
+  
+    .contact-options {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .contacts {
+        display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+    }
+  
+    .contact {
+      max-width: 100%;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      line-height: 23px;
+    }
+  
+    .footer-bottom p {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-content h2 {
+        font-family: 'Montserrat', sans-serif;
+
+      font-size: 20px;
+      width: 90%;
+    }
+  
+    .contacts span{
+        font-size: 20px;
+
+    }
+    .contacts p {
+      font-size: 16px;
+    }
+  
+    .contacts .icon {
+      font-size: 40px;
+    }
+  
+    .footer-bottom {
+      gap: 10px;
+    }
+  
+    .footer-bottom p {
+      padding: 10px;
+    }
+  }
+  
+
 }
