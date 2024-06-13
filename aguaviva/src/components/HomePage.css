@@ -994,7 +994,9 @@ color:white;
             color:rgb(255, 255, 255);
             font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
         }
-@media (max-width: 900px) {
+
+       
+            @media (max-width: 900px) {
      div .info-card p{
         font-size: 12.7px;
         letter-spacing: .025cap;
@@ -1455,7 +1457,7 @@ div .right{
     height: 500px;
     position: relative;
 top: -550px;   
-left: 20px; 
+left:0px; 
 max-width: 500px;
 background-repeat: no-repeat;
     
