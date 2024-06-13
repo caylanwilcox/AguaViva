@@ -255,7 +255,6 @@ background-size: contain;
     height: 100%;
     border-radius: 36px;
     opacity: 0; /* Initially hidden */
-    background-image: url('logo.png');
     transition: opacity 0.3s ease; /* Smooth transition */
 }
 
