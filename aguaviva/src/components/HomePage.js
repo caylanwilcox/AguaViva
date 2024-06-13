@@ -1,31 +1,31 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'; // Correct import
-import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; // Correct import
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-
+import { faWhatsapp, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './HomePage.css';
 import logo from './logo.png';
 import bg from './bg.png';
-import video from './video.mp4'
+import video from './video.mp4';
 import liquor from './liquor1.webp';
 import depression from './depression-1.webp';
 import codependency from './codependency.webp';
 import migraine from './migraine.webp';
 import eatingDisorder from './eating-disorder.webp';
-import board from './board.png'
+import board from './board.png';
 import image from './image.png';
 import nueva from './nueva.png';
 import enferm from './enfermedades.webp';
 import comentarios from './comentarios.png';
-import people from './people.webp'
+import people from './people.webp';
 import coffee from './undraw_coffee_with_friends_3cbj-1 (1).png';
 import bubbles from './bubbles.png';
+
 const HomePage = () => {
     const videoRef = useRef(null);
     const imgRef = useRef(null);
     const imgRef2 = useRef(null);
     const [menuOpen, setMenuOpen] = useState(false);
+
     const handleVideoClick = () => {
         if (videoRef.current) {
             videoRef.current.style.opacity = 1;
@@ -42,58 +42,61 @@ const HomePage = () => {
             imgRef.current.style.transform = `translateY(-${scrollY * 0.05}px) translateX(-50%)`;
         }
     };
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
     return (
         <div className="home-container">
-            <header className='head-container'>
-                <nav className='nav-elements'>
-                    <div className="logo-container"><img src={logo} alt="Agua Viva Logo" className="logo" /></div>
+            <header className="head-container">
+                <nav className="nav-elements">
+                    <div className="logo-container">
+                        <img src={logo} alt="Agua Viva Logo" className="logo" />
+                    </div>
                     <button className="hamburger" onClick={toggleMenu}>
                         <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} size="2x" />
                     </button>
                     <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-                        <li>¿Qué somos?</li>
-                        <li>¿Qué no somos?</li>
-                        <li>¿Qué hacemos?</li>
-                        <li>¿Por qué lo hacemos?</li>
-                        <li>Testimonios</li>
-                        <li>Mi Experiencia</li>
+                        <li><a href="#que-somos">¿Qué somos?</a></li>
+                        <li><a href="#que-no-somos">¿Qué no somos?</a></li>
+                        <li><a href="#que-hacemos">¿Qué hacemos?</a></li>
+                        <li><a href="#por-que-lo-hacemos">¿Por qué lo hacemos?</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#mi-experiencia">Mi Experiencia</a></li>
                     </ul>
                 </nav>
             </header>
 
             <main>
                 <div className="background-image" style={{ backgroundImage: `url(${bg})` }}>
-                    <div className="content-wrapper" >
-
-                        <section className="intro">
+                    <div className="content-wrapper">
+                        <section id="intro" className="intro">
                             <div className="left">
                                 <div className="leftheaderContentContainer">
                                     <h4>BIENVENIDO A AGUA VIVA</h4>
                                     <h1>El sentir vacío existencial tiene una respuesta</h1>
                                     <p>¿Te vives constantemente en ansiedad, depresión, angustia o frustración?</p>
                                 </div>
-
-                                <div className='contact-container'>
+                                <div className="contact-container">
                                     <div className="contact-options">
                                         <div className="contact-option">
-                                            <FontAwesomeIcon icon={faWhatsapp} size="4x" className='Path' />
-                                            <h4>Whatsapp</h4><p>Envíanos un Whatsapp</p>
+                                            <FontAwesomeIcon icon={faWhatsapp} size="4x" className="Path" />
+                                            <h4>Whatsapp</h4>
+                                            <p>Envíanos un Whatsapp</p>
                                         </div>
                                         <div className="contact-option">
-                                            <FontAwesomeIcon icon={faEnvelope} size="4x" width='100px' className='Path' />
+                                            <FontAwesomeIcon icon={faEnvelope} size="4x" width="100px" className="Path" />
                                             <h4>Email</h4>
                                             <p>Te contestaremos tan rápido como podamos</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='right'>
+                            <div className="right">
                                 <div className="video-container" onClick={handleVideoClick}>
                                     <video ref={videoRef} className="iphone-video" controls>
                                         <source src={video} type="video/mp4" />
@@ -101,11 +104,10 @@ const HomePage = () => {
                                     </video>
                                 </div>
                             </div>
-
                         </section>
                     </div>
                     <div className="info-section">
-                        <section className="info-cards-row">
+                        <section id="que-somos" className="info-cards-row">
                             <div className="info-card">
                                 <img src={liquor} alt="Alcoholismo y drogadicción" />
                                 <h3>Alcoholismo y drogadicción</h3>
@@ -128,7 +130,7 @@ const HomePage = () => {
                                 <p>¿Has abandonado planes o proyectos y no logras retomarlos debido a tu estado emocional?</p>
                             </div>
                         </section>
-                        <section className="info-cards-row">
+                        <section id="que-no-somos" className="info-cards-row">
                             <div className="info-card2">
                                 <img src={eatingDisorder} alt="Trastornos alimenticios" />
                                 <h3>Trastornos alimenticios</h3>
@@ -136,7 +138,6 @@ const HomePage = () => {
                                 <p>¿Cuándo comes, lo haces en exceso y sientes culpa al respecto?</p>
                                 <p>¿Sientes miedo antes de comer que puedes llegar al grado de medir exageradamente lo que comes?</p>
                             </div>
-
                             <div className="info-card2">
                                 <img src={codependency} alt="Codependencia" />
                                 <h3>Codependencia</h3>
@@ -144,78 +145,61 @@ const HomePage = () => {
                                 <p>En tu búsqueda de esta aprobación o aceptación de otros, ¿renuncias a lo que tu anhelas o deseas?</p>
                             </div>
                         </section>
-                        <div className="map-section">
+                        <section id="testimonios">
                             <h2>ENCUENTRA TU GRUPO MÁS CERCANO</h2>
                             <h3>Directorio Agua Viva</h3>
                             <div className="map-container">
-                                <iframe src="https://www.google.com/maps/d/embed?mid=1GmrFE4RYYe3ZI-zEHVFDaYbjGdq23Tc&ehbc=2E312F&noprof=1" width="940" height="480"></iframe>                    </div>
-                        </div>
-                        <div className="quesomos-section">
+                                <iframe src="https://www.google.com/maps/d/embed?mid=1GmrFE4RYYe3ZI-zEHVFDaYbjGdq23Tc&ehbc=2E312F&noprof=1" width="940" height="480"></iframe>
+                            </div>
+                        </section>
+                        <section id="que-somos" className="quesomos-section">
                             <div className="quesomos-container">
-                                <div className='section11'>
-                                    <h2 >Un día a la vez</h2>
-                                    <p>Somos un grupo anónimo de autoayuda sin fines de lucro dedicado a trabajar
-                                        y entender diversos síntomas y malestares de la enfermedad emocional, tales
-                                        como neurosis, depresión, ansiedad, codependencia, desórdenes alimenticios,
-                                        alcoholismo, drogadicción, etc.
-                                    </p>
-
-                                    <div className='boardrow'>
-                                        <img src={people}></img>
-                                        <div className='textcolum'>
+                                <div className="section11">
+                                    <h2>Un día a la vez</h2>
+                                    <p>Somos un grupo anónimo de autoayuda sin fines de lucro dedicado a trabajar y entender diversos síntomas y malestares de la enfermedad emocional, tales como neurosis, depresión, ansiedad, codependencia, desórdenes alimenticios, alcoholismo, drogadicción, etc.</p>
+                                    <div className="boardrow">
+                                        <img src={people} alt="People" />
+                                        <div className="textcolum">
                                             <h4>PARA PERSONAS ENTRE 13 Y 70 AÑOS </h4>
                                             <p>No importa tu clase social, etnia, creencia, religión o partido político.</p>
-                                            <button className="learn-more-buton">Conocer más</button>
-
+                                            <button className="```jsx
+learn-more-buton">Conocer más</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='section22'>
-                                    <img src={coffee}></img>
+                                <div className="section22">
+                                    <img src={coffee} alt="Coffee" />
                                 </div>
-
                             </div>
-                        </div>
-                        <div className="quesomos-section">
+                        </section>
+                        <section id="que-no-somos" className="quesomos-section">
                             <div className="nosomos-container">
-                                <div className='section11'>
-                                    <h4 >¿QUÉ NO SOMOS?
-                                    </h4>
+                                <div className="section11">
+                                    <h4>¿QUÉ NO SOMOS?</h4>
                                     <h2 className="dia">No somos profesionales, pero sabemos lo que hacemos</h2>
-                                    <p>No somos AA, las problemáticas a las que atendemos no se centran únicamente en el consumo de alcohol o drogas, tampoco somos una religión, nuestros miembros son libres de profesar cualquier creencia o credo e incluso de no hacerlo. No somos una secta, si tu, llegas a cualquier grupo de Agua Viva, serás bienvenido, y estarás en toda la libertad de elegir ser o no parte de nuestra comunidad.
-
-                                        No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimental, Agua Viva tiene más de 20 años en los cuales hemos logrado influir positivamente en la vida de miles de personas.
-                                    </p>
-
-
+                                    <p>No somos AA, las problemáticas a las que atendemos no se centran únicamente en el consumo de alcohol o drogas, tampoco somos una religión, nuestros miembros son libres de profesar cualquier creencia o credo e incluso de no hacerlo. No somos una secta, si tu llegas a cualquier grupo de Agua Viva, serás bienvenido, y estarás en toda la libertad de elegir ser o no parte de nuestra comunidad. No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimental, Agua Viva tiene más de 20 años en los cuales hemos logrado influir positivamente en la vida de miles de personas.</p>
                                     <button className="learn-more-buton">Conocer más</button>
-
-
-
                                 </div>
-                                <div className='section22'>
-                                    <img src={bubbles}></img>
+                                <div className="section22">
+                                    <img src={bubbles} alt="Bubbles" />
                                 </div>
-
                             </div>
-                        </div>
-
-                        <div className="nueva-section">
+                        </section>
+                        <section id="que-hacemos" className="nueva-section">
                             <div className="image-container">
                                 <img src={nueva} alt="Una nueva visión" />
                                 <button className="learn-more-button">Conocer más</button>
                             </div>
-                        </div>
-                        <div className="custom-image-container">
+                        </section>
+                        <section id="por-que-lo-hacemos" className="custom-image-container">
                             <img src={enferm} alt="Background" className="custom-scrolling-image" ref={imgRef} />
                             <div className="custom-content-overlay">
                                 <h2>¿Por qué lo hacemos?</h2>
                                 <p>Nos dimos cuenta de que entregarnos a otros seres humanos sin esperar nada a cambio, nos ayudaba a recuperarnos y mantenernos sobrios un día a la vez.</p>
                                 <a href="#" className="custom-btn">Saber más</a>
                             </div>
-                        </div>
-
-                        <div className="testimonials-container">
+                        </section>
+                        <section id="testimonios" className="testimonials-container">
                             <h2>Comentarios de la Comunidad</h2>
                             <div className="testimonials-wrapper">
                                 <div className="testimonial-box">
@@ -233,8 +217,8 @@ const HomePage = () => {
                                     <p className="author">Óscar B.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="experience-container">
+                        </section>
+                        <section id="mi-experiencia" className="experience-container">
                             <div className="left-column">
                                 <div className="step">
                                     <h2>01</h2>
@@ -266,7 +250,7 @@ const HomePage = () => {
                                     <button>Comenzar</button>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                     </div>
                     <footer className="footer">
                         <div className="footer-content">
@@ -287,17 +271,15 @@ const HomePage = () => {
                         <div className="footer-bottom">
                             <p>Copyright © 2023 Agua Viva Grupos Anónimos de Autoayuda</p>
                             <div className="social-icons">
-                                <FontAwesomeIcon className='facebook' icon={faFacebook} size="2x" />
-                                <FontAwesomeIcon className='instagram' icon={faInstagram} size="2x" />
+                                <FontAwesomeIcon className="facebook" icon={faFacebook} size="2x" />
+                                <FontAwesomeIcon className="instagram" icon={faInstagram} size="2x" />
                             </div>
                         </div>
                     </footer>
                 </div>
-
             </main>
         </div>
     );
 };
 
 export default HomePage;
-

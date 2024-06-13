@@ -799,27 +799,7 @@ line-height: 22px
     background-color: #073c7a;
 }
 
-.experience-container:before, .experience-container:after {
-    content: '';
-    position: absolute;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    z-index: -1;
-}
 
-.experience-container:before {
-    width: 150px;
-    height: 150px;
-    top: -75px;
-    left: -75px;
-}
-
-.experience-container:after {
-    width: 100px;
-    height: 100px;
-    bottom: -50px;
-    right: -50px;
-}
 .testimonials-container {
     text-align: center;
     padding: 20px;
@@ -1293,6 +1273,7 @@ color:white;
     }
     .background-image {
         background-image: none !important;
+        background-repeat: no-repeat;
     }
 .contact-container{
     display: flex;
