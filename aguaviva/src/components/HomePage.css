@@ -345,6 +345,7 @@ background-size: cover;
 
     width:55%;
     margin: 60px 0;
+    margin-bottom: 30px;
 display: flex;
 flex-direction: row;
     border-radius: 20px;
@@ -352,7 +353,7 @@ flex-direction: row;
    background:linear-gradient(90deg, #5CC7EF 0%, #76aee0d1 90%);
    font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif;
 color: white;
-padding: 2%;
+padding: 4%;
 align-items: center;
 }
 .nosomos-container{
@@ -460,6 +461,7 @@ margin-bottom: 0px;
 padding: 0%;
 color:rgb(0,85,165);
 }
+
  .learn-more-buton{
     background-color: #0055a5; /* Background color */
     color: #ffffff; /* Text color */
@@ -469,6 +471,22 @@ color:rgb(0,85,165);
     border: 0; /* No border */
     padding: 10px 18px; /* Padding */
     border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+ z-index: 40;
+ transition: background-color 0.3s ease, padding 0.3s ease; /* Transition for background color and padding */
+ outline: none; /* No outline */
+ width: 190px;
+}
+.learn-more-buton1{
+    background-color: #0055a5; /* Background color */
+    color: #ffffff; /* Text color */
+    font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
+    font-size: 17px; /* Font size */
+    font-weight: 600; /* Font weight */
+    border: 0; /* No border */
+    padding: 10px 18px; /* Padding */
+    border-radius: 50px; /* Rounded corners */
+    bottom: 150px;
     cursor: pointer; /* Pointer cursor on hover */
  z-index: 40;
  transition: background-color 0.3s ease, padding 0.3s ease; /* Transition for background color and padding */
@@ -597,9 +615,29 @@ line-height: 58px;
     width: 100%;
     height: auto;
 }
+.learn-more-button1 {
+    text-decoration: none;
+    bottom: -225px;
+    left:0px;
+    background-color: #0055a5; /* Background color */
+    color: #ffffff; /* Text color */
+    font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
+    font-size: 17px; /* Font size */
+    font-weight: 600; /* Font weight */
+    border: 0; /* No border */
+    padding: 10px 18px; /* Padding */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Absolute positioning */
+ z-index: 40;
+ transition: background-color 0.3s ease, padding 0.3s ease; /* Transition for background color and padding */
+ outline: none; /* No outline */
+    display: inline-block; /* Display as inline-block */
+}
 .learn-more-button {
-    bottom: 60px;
-    left:80px;
+    text-decoration: none;
+    bottom: -40px;
+    left:50px;
     background-color: #0055a5; /* Background color */
     color: #ffffff; /* Text color */
     font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
@@ -665,6 +703,23 @@ line-height: 58px;
 }
 
 .learn-more-button:hover::after {
+    opacity: 1; /* Show arrow on hover */
+}
+.learn-more-button1:hover {
+    background-color: #004080; /* Background color on hover */
+    padding-right: 30px; /* Increase padding on the right to make space for the arrow */
+}
+.learn-more-buton{
+    text-decoration: none;
+}
+.learn-more-button1::after {
+    content: ">"; /* Right arrow character */
+    padding-left: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Transition for opacity */
+}
+
+.learn-more-button1:hover::after {
     opacity: 1; /* Show arrow on hover */
 }
 /* Media Queries for Tablets */
@@ -870,7 +925,9 @@ line-height: 22px
     text-align: center;
     font-weight: 500;
   }
-  
+ footer .contact p{
+    max-width: 700px;
+  }
   .testimonial-box .author {
     font-weight: bold;
     color: #333;
@@ -917,8 +974,8 @@ line-height: 22px
   
   .contact-option {
     text-align: center;
+    text-decoration: none;
   }
-  
   .contact-option p {
     margin: 5px 0;
   }
@@ -935,15 +992,20 @@ line-height: 22px
 font-size: 14px;
 gap: 30px;
   }
-  
-  .footer-bottom p {
-    margin: 0;
-    padding: 30px;
-    font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif; /* Font family */
-    font-size: 14px;
-    
-  }
-  
+  .contact-options .contact-link {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Ensure link inherits text color */
+    display: inline-block; /* Ensure it behaves as a block element */
+}
+.contacts .contact-link {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Ensure link inherits text color */
+    display: inline-block; /* Ensure it behaves as a block element */
+}
+.contact-option .contact-link:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
   .social-icons {
     display: flex;
     justify-content: center;
@@ -986,7 +1048,10 @@ color:white;
         margin-bottom: 20px;
 
         }
-        .contacts p{
+
+        .contact{
+            text-decoration: none;
+        }        .contacts p{
             margin-top: 10px;
             font-size: 14px;
             display: block;
@@ -997,6 +1062,12 @@ color:white;
 
        
             @media (max-width: 900px) {
+                .contact-options{
+                    max-height: 500px;
+                }
+                .contact-container .contact-options{
+                    position: relative;
+                    bottom:-130px}
      div .info-card p{
         font-size: 12.7px;
         letter-spacing: .025cap;
@@ -1407,14 +1478,16 @@ color:white;
         
     }
     
-    .contact-option {
+    .contact-option a{
         display: flex;
         width: 100%;
         align-items: center;
         margin: 0 0px;
         height: 500px;
+        text-decoration-line: none;
 
     text-align: center;
+    text-decoration: none;
     }
     .leftheaderContentContainer p{
         font-size: 14px;
@@ -1427,7 +1500,12 @@ margin-top: 15px;
         width: 100%;
 justify-content: center;        margin: 0 0px;
     text-align: center;
+    text-decoration-line: none;
     }
+    .contact-option p{
+        text-decoration-line:none !important;
+    }
+    contact-
     .contact-option .Path{
         color:rgb(0,85,165);
         size:60px;
@@ -1445,6 +1523,10 @@ justify-content: center;        margin: 0 0px;
     color: rgb(102, 102, 102);
     line-height: 24px;
     width: 100%;
+    text-decoration: none;
+
+    text-decoration-line: none;
+
     }
 div .right{
     display: flex !important;
@@ -1578,6 +1660,8 @@ margin-top: 0px;
       font-size: 1rem;
 
     }
+    .section11 a {
+margin-bottom: 40px;    }
     div .section33 h2 {
         color: rgb(17, 16, 16);
         font-size: 30px;
@@ -1596,6 +1680,7 @@ color: rgb(0, 87, 159);
       align-items: start;
       gap: 10px;
       margin: auto;
+      margin-bottom: 44px;
     }
     .boardrow p{
       margin: 10px 0 30px 0;

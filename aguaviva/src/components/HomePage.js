@@ -98,15 +98,21 @@ const HomePage = () => {
                                 </div>
                                 <div className="contact-container">
                                     <div className="contact-options">
+                                        <a  href="tel:+1234567890" className="contact-link" >
+
                                         <div className="contact-option">
                                             <FontAwesomeIcon icon={faWhatsapp} size="4x" className="Path" />
                                             <h4>Whatsapp</h4>
                                             <p>Envíanos un Whatsapp</p>
                                         </div>
+                                        </a>
                                         <div className="contact-option">
+                                        <a href="mailto:caylan45@yahoo.com" className="contact-link">
+
                                             <FontAwesomeIcon icon={faEnvelope} size="4x" width="100px" className="Path" />
                                             <h4>Email</h4>
                                             <p>Te contestaremos tan rápido como podamos</p>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -177,9 +183,10 @@ const HomePage = () => {
                                         <div className="textcolum">
                                             <h4>PARA PERSONAS ENTRE 13 Y 70 AÑOS </h4>
                                             <p>No importa tu clase social, etnia, creencia, religión o partido político.</p>
-                                            <button className="```jsx
-learn-more-buton">Conocer más</button>
+
                                         </div>
+                                        <a href="#que-no-somos" className="learn-more-button">Conocer más</a>
+
                                     </div>
                                 </div>
                                 <div className="section22">
@@ -193,8 +200,8 @@ learn-more-buton">Conocer más</button>
                                     <h4>¿QUÉ NO SOMOS?</h4>
                                     <h2 className="dia">No somos profesionales, pero sabemos lo que hacemos</h2>
                                     <p>No somos AA, las problemáticas a las que atendemos no se centran únicamente en el consumo de alcohol o drogas, tampoco somos una religión, nuestros miembros son libres de profesar cualquier creencia o credo e incluso de no hacerlo. No somos una secta, si tu llegas a cualquier grupo de Agua Viva, serás bienvenido, y estarás en toda la libertad de elegir ser o no parte de nuestra comunidad. No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimental, Agua Viva tiene más de 20 años en los cuales hemos logrado influir positivamente en la vida de miles de personas.</p>
-                                    <button className="learn-more-buton">Conocer más</button>
-                                </div>
+                                    <a href="#que-hacemos" className="learn-more-buton">Conocer más</a>
+                                    </div>
                                 <div className="section22">
                                     <img src={bubbles} alt="Bubbles" />
                                 </div>
@@ -203,15 +210,15 @@ learn-more-buton">Conocer más</button>
                         <section id="que-hacemos" className="nueva-section">
                             <div className="image-container">
                                 <img src={nueva} alt="Una nueva visión" />
-                                <button className="learn-more-button">Conocer más</button>
-                            </div>
+                                <a href="#por-que-lo-hacemos" className="learn-more-button">Conocer más</a>
+                                </div>
                         </section>
                         <section id="por-que-lo-hacemos" className="custom-image-container">
                             <img src={enferm} alt="Background" className="custom-scrolling-image" ref={imgRef} />
                             <div className="custom-content-overlay">
                                 <h2>¿Por qué lo hacemos?</h2>
                                 <p>Nos dimos cuenta de que entregarnos a otros seres humanos sin esperar nada a cambio, nos ayudaba a recuperarnos y mantenernos sobrios un día a la vez.</p>
-                                <a href="#" id="testimonios" className="custom-btn">Saber más</a>
+                                <a href="#testimonios" id="testimonios" className="custom-btn">Saber más</a>
                             </div>
                         </section>
                         <section  className="testimonials-container">
@@ -262,8 +269,8 @@ learn-more-buton">Conocer más</button>
                                     <h2>MI EXPERIENCIA</h2>
                                     <h1>Es tu momento.</h1>
                                     <p>Creamos una experiencia vivencial, de intensa reflexión. Generamos un clima propicio para la introspección profunda sobre nuestro pasado y presente con el fin de encontrar respuestas a nuestros problemas actuales.</p>
-                                    <button>Comenzar</button>
-                                </div>
+                                    <a  href="tel:+1234567890" className='learn-more-buton' >Comenzar</a>
+                                    </div>
                             </div>
                         </section>
                     </div>
@@ -271,16 +278,20 @@ learn-more-buton">Conocer más</button>
                         <div className="footer-content">
                             <h2>Siempre habrá alguien para escucharte. Ya no estás solo.</h2>
                             <div className="contacts">
+                            <a  href="tel:+1234567890" className="contact-link">
+
                                 <div className="contact">
-                                    <FontAwesomeIcon className="icon" icon={faWhatsapp} size="4x" />
+                                <FontAwesomeIcon className="icon" icon={faWhatsapp} size="4x" />
                                     <span>Whatsapp</span>
                                     <p>Envíanos un Whatsapp</p>
                                 </div>
-                                <div className="contact">
-                                    <FontAwesomeIcon className="icon" icon={faEnvelope} size="4x" />
-                                    <span>Email</span>
-                                    <p>Te contestaremos tan rápido como podamos</p>
-                                </div>
+                               </a>                              <div className="contact">
+                <a href="mailto:caylan45@yahoo.com" className="contact-link">
+                    <FontAwesomeIcon className="icon" icon={faEnvelope} size="4x" />
+                    <span>Email</span>
+                    <p>Te contestaremos<br />tan rápido como podamos</p>
+                </a>
+            </div>
                             </div>
                         </div>
                         <div className="footer-bottom">
