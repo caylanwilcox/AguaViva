@@ -1090,27 +1090,33 @@ color:white;
             padding: 20px;
         }
     
-        .left-column{
+       div .left-column{
+        margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-content: center;
-            width:80%;
-            padding-right: 0px;
+            width:100%;
+            
             text-align: left;
-            padding-left: -30px;
         }
         
         .right-column {
             align-content: center;
-            width:80%;
+            width:100%;
             padding-right: 0px;
             text-align: left;
             padding-left: 0px;
         }
     
         .step {
+            display: flex;
             flex-direction: column;
             text-align: left;
-            padding: 15px;
-        }
+            align-items: center;
+            justify-content: center;
+        max-width: 100%; 
+    width: 86%;       }
     
         .step h2 {
             margin-bottom: 10px;
@@ -1130,7 +1136,9 @@ color:white;
             font-size: 15px;
             padding: 8px 16px;
         }
-    
+    .step{
+        flex-direction: row;
+    }
         .step h2 {
             font-size: 28px;
         }
