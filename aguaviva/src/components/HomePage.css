@@ -521,13 +521,18 @@ color:rgb(0,85,165);
     text-align: center;
     z-index: 10;
 }
-.nav-menu ul{
-    max-width: 100%;
-    text-align: center;
+nav ul li a {
+    text-decoration: none;
+    color: inherit; /* Use the same color as the parent element */
+}
+
+nav ul li a:hover {
+    color: #0055a5; /* Change color on hover */
 }
 .nav-menu ul{
     max-width: 100%;
     text-align: center;
+    text-decoration: none;
 }
 .custom-content-overlay h2 {
     margin-bottom: 10px;
@@ -963,6 +968,7 @@ color:white;
     max-width: 15%;
         margin-bottom: 5px;
 
+        
 }
 .contacts span{
     display: block;
