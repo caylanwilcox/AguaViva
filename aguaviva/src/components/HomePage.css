@@ -1154,7 +1154,7 @@ color:white;
     .custom-image-container {
         position: relative;
         height: 60vh; /* Set the desired height */
-        overflow: scroll;
+        overflow: hidden;
     }
     
     
@@ -1593,7 +1593,7 @@ margin-top: 0px;
 
     }
     .custom-content-overlay {
-        position: absolute;
+        position: relative;
         top: 55%;
         left: 50%;
         background: white;

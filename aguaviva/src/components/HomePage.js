@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import TypingEffect from './TypingEffect'; // Import the TypingEffect component
-import lax from 'lax.js';
 
 import './HomePage.css';
 import logo from './logo.png';
@@ -43,12 +42,6 @@ const HomePage = () => {
         const scrollY = window.scrollY || window.pageYOffset; // Ensure compatibility with different browsers
         if (imgRef.current) {
             imgRef.current.style.transform = `translateY(-${scrollY * 0.05}px) translateX(-50%)`;
-        }
-    };
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -225,7 +218,7 @@ const HomePage = () => {
                             <div className="custom-content-overlay">
                                 <h2>¿Por qué lo hacemos?</h2>
                                 <p>Nos dimos cuenta de que entregarnos a otros seres humanos sin esperar nada a cambio, nos ayudaba a recuperarnos y mantenernos sobrios un día a la vez.</p>
-                                <a href="#testimonios" id="testimonios" className="custom-btn">Saber más</a>
+                                <a href="#mi-experiencia"id="testimonios" className="custom-btn">Saber más</a>
                             </div>
                         </section>
                         <section  className="testimonials-container">
