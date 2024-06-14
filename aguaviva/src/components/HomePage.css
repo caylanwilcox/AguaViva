@@ -1,4 +1,8 @@
 /* Global Styles */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling globally */
+}
+
 body {
     background-color:rgb(242, 245, 247);
     ;
@@ -1150,7 +1154,7 @@ color:white;
     .custom-image-container {
         position: relative;
         height: 60vh; /* Set the desired height */
-        overflow: hidden;
+        overflow: scroll;
     }
     
     

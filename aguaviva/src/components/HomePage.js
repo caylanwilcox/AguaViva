@@ -45,6 +45,12 @@ const HomePage = () => {
             imgRef.current.style.transform = `translateY(-${scrollY * 0.05}px) translateX(-50%)`;
         }
     };
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
