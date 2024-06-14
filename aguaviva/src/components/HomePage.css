@@ -441,7 +441,7 @@ font-size: 1.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px;
 }
 .section22{
     align-items: center;
@@ -1611,7 +1611,7 @@ background-repeat: no-repeat;
 @media (max-width: 900px) {
     .nueva-section{
         align-items: flex-end;
-    height: 800px;
+    height: 600px;
     }
     .nueva-section img{
         max-width: 500px;
