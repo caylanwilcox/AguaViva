@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import TypingEffect from './TypingEffect'; // Import the TypingEffect component
+import lax from 'lax.js';
 
 import './HomePage.css';
 import logo from './logo.png';
@@ -39,7 +40,7 @@ const HomePage = () => {
     };
 
     const handleScroll = () => {
-        const scrollY = window.scrollY;
+        const scrollY = window.scrollY || window.pageYOffset; // Ensure compatibility with different browsers
         if (imgRef.current) {
             imgRef.current.style.transform = `translateY(-${scrollY * 0.05}px) translateX(-50%)`;
         }
