@@ -57,7 +57,7 @@ const HomePage = () => {
             <header className="head-container">
                 <nav className="nav-elements">
                     <div className="logo-container">
-                        <img src={logo} alt="Agua Viva Logo" className="logo" />
+                        <a href="https://agua-viva-wzaz.vercel.app/"><img src={logo} alt="Agua Viva Logo" className="logo" /></a>
                     </div>
                     <button className="hamburger" onClick={toggleMenu}>
                         <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} size="2x" />
@@ -71,7 +71,7 @@ const HomePage = () => {
                         <li><a href="#mi-experiencia">Mi Experiencia</a></li>
                         <li><a href="https://aguaviva.com.mx/">Agua Viva México</a></li>
 
-                    </ul>
+                    </ul> 
                 </nav>
             </header>
 
@@ -189,6 +189,7 @@ const HomePage = () => {
                                             <p>No importa tu clase social, etnia, creencia, religión o partido político.</p>
 
                                         </div>
+                                        
                                         <a href="#que-no-somos" className="learn-more-button">Conocer más</a>
 
                                     </div>
