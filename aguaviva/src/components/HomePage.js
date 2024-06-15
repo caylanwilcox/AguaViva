@@ -21,7 +21,7 @@ import comentarios from './comentarios.png';
 import people from './people.webp';
 import coffee from './undraw_coffee_with_friends_3cbj-1 (1).png';
 import bubbles from './bubbles.png';
-
+import searching from './searching-yellow.webp'
 const HomePage = () => {
     const videoRef = useRef(null);
     const imgRef = useRef(null);
@@ -69,6 +69,8 @@ const HomePage = () => {
                         <li><a href="#por-que-lo-hacemos">¿Por qué lo hacemos?</a></li>
                         <li><a href="#testimonios">Testimonios</a></li>
                         <li><a href="#mi-experiencia">Mi Experiencia</a></li>
+                        <li><a href="https://aguaviva.com.mx/">Agua Viva México</a></li>
+
                     </ul>
                 </nav>
             </header>
@@ -93,25 +95,25 @@ const HomePage = () => {
                                             loop
                                         />
                                         <br />
-                                     <span> tiene una respuesta </span>  
+                                        <span> tiene una respuesta </span>
                                     </h1>                     <p>¿Te vives constantemente en ansiedad, depresión, angustia o frustración?</p>
                                 </div>
                                 <div className="contact-container">
                                     <div className="contact-options">
-                                        <a  href="tel:+1234567890" className="contact-link" >
+                                        <a href="tel:+1234567890" className="contact-link" >
 
-                                        <div className="contact-option">
-                                            <FontAwesomeIcon icon={faWhatsapp} size="4x" className="Path" />
-                                            <h4>Whatsapp</h4>
-                                            <p>Envíanos un Whatsapp</p>
-                                        </div>
+                                            <div className="contact-option">
+                                                <FontAwesomeIcon icon={faWhatsapp} size="4x" className="Path" />
+                                                <h4>Whatsapp</h4>
+                                                <p>Envíanos un Whatsapp</p>
+                                            </div>
                                         </a>
                                         <div className="contact-option">
-                                        <a href="mailto:caylan45@yahoo.com" className="contact-link">
+                                            <a href="mailto:caylan45@yahoo.com" className="contact-link">
 
-                                            <FontAwesomeIcon icon={faEnvelope} size="4x" width="100px" className="Path" />
-                                            <h4>Email</h4>
-                                            <p>Te contestaremos tan rápido como podamos</p>
+                                                <FontAwesomeIcon icon={faEnvelope} size="4x" width="100px" className="Path" />
+                                                <h4>Email</h4>
+                                                <p>Te contestaremos tan rápido como podamos</p>
                                             </a>
                                         </div>
                                     </div>
@@ -128,7 +130,7 @@ const HomePage = () => {
                         </section>
                     </div>
                     <div className="info-section">
-                        <section  className="info-cards-row">
+                        <section className="info-cards-row">
                             <div className="info-card">
                                 <img src={liquor} alt="Alcoholismo y drogadicción" />
                                 <h3>Alcoholismo y drogadicción</h3>
@@ -151,7 +153,7 @@ const HomePage = () => {
                                 <p>¿Has abandonado planes o proyectos y no logras retomarlos debido a tu estado emocional?</p>
                             </div>
                         </section>
-                        <section  className="info-cards-row">
+                        <section className="info-cards-row">
                             <div className="info-card2">
                                 <img src={eatingDisorder} alt="Trastornos alimenticios" />
                                 <h3>Trastornos alimenticios</h3>
@@ -166,13 +168,15 @@ const HomePage = () => {
                                 <p>En tu búsqueda de esta aprobación o aceptación de otros, ¿renuncias a lo que tu anhelas o deseas?</p>
                             </div>
                         </section>
-                        <section >
+                        <section className='mapContainer' >
                             <h2>ENCUENTRA TU GRUPO MÁS CERCANO</h2>
                             <h3>Directorio Agua Viva</h3>
                             <div className="map-container">
                                 <iframe src="https://www.google.com/maps/d/embed?mid=1GmrFE4RYYe3ZI-zEHVFDaYbjGdq23Tc&ehbc=2E312F&noprof=1" width="940" height="480"></iframe>
                             </div>
                         </section>
+
+
                         <section id="que-somos" className="quesomos-section">
                             <div className="quesomos-container">
                                 <div className="section11">
@@ -194,6 +198,9 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </section>
+
+                        {/* ----------------------------------------*/}
+
                         <section id="que-no-somos" className="quesomos-section">
                             <div className="nosomos-container">
                                 <div className="section11">
@@ -201,27 +208,51 @@ const HomePage = () => {
                                     <h2 className="dia">No somos profesionales, pero sabemos lo que hacemos</h2>
                                     <p>No somos AA, las problemáticas a las que atendemos no se centran únicamente en el consumo de alcohol o drogas, tampoco somos una religión, nuestros miembros son libres de profesar cualquier creencia o credo e incluso de no hacerlo. No somos una secta, si tu llegas a cualquier grupo de Agua Viva, serás bienvenido, y estarás en toda la libertad de elegir ser o no parte de nuestra comunidad. No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimental, Agua Viva tiene más de 20 años en los cuales hemos logrado influir positivamente en la vida de miles de personas.</p>
                                     <a href="#que-hacemos" className="learn-more-buton">Conocer más</a>
-                                    </div>
+                                </div>
                                 <div className="section22">
                                     <img src={bubbles} alt="Bubbles" />
                                 </div>
                             </div>
                         </section>
-                        <section id="que-hacemos" className="nueva-section">
-                            <div className="image-container">
-                                <img src={nueva} alt="Una nueva visión" />
-                                <a href="#por-que-lo-hacemos" className="learn-more-button">Conocer más</a>
+
+                        {/* ----------------------------------------*/}
+
+
+                        <section className="nueva-section">
+                            <div className="nuevavision-container" id="que-hacemos">
+                                <div className='leftside'>
+                            <div className='span-hacemos'>¿QUÉ HACEMOS? </div>
+                            
+                            <div className='leftsideimage' >
+                                    <img src={searching} alt="woman-searching" />
                                 </div>
+                                </div>
+                                <div className="section11">
+                                    <h2>Una nueva visión </h2>    
+                                    <p>Nuestro método está basado en revisar áreas específicas de nuestra personalidad con la finalidad de encontrar solución a nuestros problemas actuales, encontrando su origen en nuestro pasado, teniendo como resultado de esta experiencia una mejor comprensión de nuestro pasado, un mejor entendimiento de nuestro presente y una postura distinta para afrontar el futuro.</p>                                   
+                                 
+                                        <div className='quehacemos button'>
+                                        <a href="#por-que-lo-hacemos" className="learn-more-buton">Conocer más</a>
+                                      
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </section>
+
+
+
                         <section id="por-que-lo-hacemos" className="custom-image-container">
                             <img src={enferm} alt="Background" className="custom-scrolling-image" ref={imgRef} />
+                            <div className='custom-overlay-container'>
                             <div className="custom-content-overlay">
                                 <h2>¿Por qué lo hacemos?</h2>
                                 <p>Nos dimos cuenta de que entregarnos a otros seres humanos sin esperar nada a cambio, nos ayudaba a recuperarnos y mantenernos sobrios un día a la vez.</p>
-                                <a href="#mi-experiencia"id="testimonios" className="custom-btn">Saber más</a>
+                                <a href="#mi-experiencia" id="testimonios" className="custom-btn">Saber más</a>
+                                </div>
                             </div>
                         </section>
-                        <section  className="testimonials-container">
+                        <section className="testimonials-container">
                             <h2>Comentarios de la Comunidad</h2>
                             <div className="testimonials-wrapper">
                                 <div className="testimonial-box">
@@ -234,7 +265,7 @@ const HomePage = () => {
                                     <p>Gracias a que me permití invertir tiempo en mí hoy puedo entenderme mejor y vivir feliz.</p>
                                     <p className="author">Jonathan S.</p>
                                 </div>
-                                <div  className="testimonial-box">
+                                <div className="testimonial-box">
                                     <p>Gracias a Agua Viva el día de hoy ya no sufro de ataques de ansiedad, pude mantener mi matrimonio, y encontré esa seguridad en mí que me permite construir la vida que siempre quise.</p>
                                     <p className="author">Óscar B.</p>
                                 </div>
@@ -269,8 +300,8 @@ const HomePage = () => {
                                     <h2>MI EXPERIENCIA</h2>
                                     <h1>Es tu momento.</h1>
                                     <p>Creamos una experiencia vivencial, de intensa reflexión. Generamos un clima propicio para la introspección profunda sobre nuestro pasado y presente con el fin de encontrar respuestas a nuestros problemas actuales.</p>
-                                    <a  href="tel:+1234567890" className='learn-more-buton' >Comenzar</a>
-                                    </div>
+                                    <a href="tel:+1234567890" className='learn-more-buton' >Comenzar</a>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -278,20 +309,20 @@ const HomePage = () => {
                         <div className="footer-content">
                             <h2>Siempre habrá alguien para escucharte. Ya no estás solo.</h2>
                             <div className="contacts">
-                            <a  href="tel:+1234567890" className="contact-link">
+                                <a href="tel:+1234567890" className="contact-link">
 
-                                <div className="contact">
-                                <FontAwesomeIcon className="icon" icon={faWhatsapp} size="4x" />
-                                    <span>Whatsapp</span>
-                                    <p>Envíanos un Whatsapp</p>
+                                    <div className="contact">
+                                        <FontAwesomeIcon className="icon" icon={faWhatsapp} size="4x" />
+                                        <span>Whatsapp</span>
+                                        <p>Envíanos un Whatsapp</p>
+                                    </div>
+                                </a>                              <div className="contact">
+                                    <a href="mailto:caylan45@yahoo.com" className="contact-link">
+                                        <FontAwesomeIcon className="icon" icon={faEnvelope} size="4x" />
+                                        <span>Email</span>
+                                        <p>Te contestaremos<br />tan rápido como podamos</p>
+                                    </a>
                                 </div>
-                               </a>                              <div className="contact">
-                <a href="mailto:caylan45@yahoo.com" className="contact-link">
-                    <FontAwesomeIcon className="icon" icon={faEnvelope} size="4x" />
-                    <span>Email</span>
-                    <p>Te contestaremos<br />tan rápido como podamos</p>
-                </a>
-            </div>
                             </div>
                         </div>
                         <div className="footer-bottom">
