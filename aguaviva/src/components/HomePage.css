@@ -1259,12 +1259,7 @@ color:white;
     height: auto;
     margin-bottom: 20px; /* Add margin for better spacing on small screens */
   }
-  .logo{
-    width: 50%;
-  }
-  .section22 img{
-    width: 70%;
-  }
+  
   .testimonial-box.highlighted {
     text-align: left;
     line-height: 29px;
@@ -1938,9 +1933,7 @@ font-weight: 600px !important;
     }
     
     @media (max-width: 900px) {
-    .section11{
-        margin-bottom: 15%;
-    }
+    
         .intro{
             display: flex;
          
@@ -1989,9 +1982,8 @@ font-weight: 600px !important;
         display: flex;
         justify-content: center;
         order:2;
-        position: relative;        
-        top: 503px;
-    left: 100px;
+        position: relative;        top: 503px;
+    
     }
         .contact-options {
             display: flex;
@@ -2060,12 +2052,12 @@ font-weight: 600px !important;
         max-width: 300px;
     }
     .video-container{
- 
+        display: flex !important;
         justify-content: center;
         height: 500px;
         position: relative;
     top: -550px;   
-    left:210px; 
+    left:20px; 
     max-width: 500px;
     background-repeat: no-repeat;
         
