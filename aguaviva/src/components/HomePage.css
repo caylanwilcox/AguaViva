@@ -381,6 +381,8 @@ display: flex;
 align-items: flex-end;
 
 }
+
+
 .quesomos-container{
     text-align: left;
 
@@ -411,6 +413,12 @@ flex-direction: row;
 color: black;
 
 }
+/* HomePage.css */
+
+/* Add this to the existing CSS */
+
+  /* Ensure you have the rest of your CSS here */
+  
 .section11{
 width: 50%;
 margin: 10px;
@@ -1136,7 +1144,13 @@ color:white;
             .custom-image-container {
                 height: 600px; /* Set the desired height */
             }
-
+            .bubblesectioncontainer{
+                flex-direction: column;
+                margin-top:600px;
+                margin-left: 97px;
+                margin-bottom: 50px;
+                left: 50px;
+            }
             .custom-scrolling-image {
                 position: absolute;
                 top: 265px;
@@ -1729,7 +1743,7 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 375px auto 25px auto;
+    margin: 275px auto 25px auto;
 }
     .quesomos-container {
         text-align: left;
@@ -2057,7 +2071,7 @@ font-weight: 600px !important;
         height: 500px;
         position: relative;
     top: -550px;   
-    left:20px; 
+    left:0px; 
     max-width: 500px;
     background-repeat: no-repeat;
         

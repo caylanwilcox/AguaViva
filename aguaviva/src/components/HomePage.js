@@ -21,11 +21,11 @@ import comentarios from './comentarios.png';
 import people from './people.webp';
 import coffee from './undraw_coffee_with_friends_3cbj-1 (1).png';
 import bubbles from './bubbles.png';
+import Bubbles from './Bubbles'; // Import the Bubbles component
 import searching from './searching-yellow.webp'
 const HomePage = () => {
     const videoRef = useRef(null);
     const imgRef = useRef(null);
-    const imgRef2 = useRef(null);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleVideoClick = () => {
@@ -53,7 +53,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div className="home-container">
+        <div className="home-container ">
             <header className="head-container">
                 <nav className="nav-elements">
                     <div className="logo-container">
@@ -78,7 +78,7 @@ const HomePage = () => {
             <main>
                 <div className="background-image" style={{ backgroundImage: `url(${bg})` }}>
                     <div className="content-wrapper">
-                        <section id="intro" className="intro">
+                        <section id="intro" className="intro fade-in-section">
                             <div className="left">
                                 <div className="leftheaderContentContainer">
                                     <h4>BIENVENIDO A AGUA VIVA</h4>
@@ -97,8 +97,7 @@ const HomePage = () => {
                                         <br />
                                         <span> tiene una respuesta </span>
                                     </h1>                     <p>¿Te vives constantemente en ansiedad, depresión, angustia o frustración?</p>
-                                </div>
-                                <div className="contact-container">
+                                      <div className="contact-container">
                                     <div className="contact-options">
                                         <a href="tel:+1234567890" className="contact-link" >
 
@@ -116,9 +115,12 @@ const HomePage = () => {
                                                 <p>Te contestaremos tan rápido como podamos</p>
                                             </a>
                                         </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
+                                </div>
+                                </div>
+                              
                             <div className="right">
                                 <div className="video-container" onClick={handleVideoClick}>
                                     <video ref={videoRef} className="iphone-video" controls>
@@ -130,7 +132,7 @@ const HomePage = () => {
                         </section>
                     </div>
                     <div className="info-section">
-                        <section className="info-cards-row">
+                        <section className="info-cards-row fade-in-section" >
                             <div className="info-card">
                                 <img src={liquor} alt="Alcoholismo y drogadicción" />
                                 <h3>Alcoholismo y drogadicción</h3>
@@ -201,23 +203,11 @@ const HomePage = () => {
                         </section>
 
                         {/* ----------------------------------------*/}
-
-                        <section id="que-no-somos" className="quesomos-section">
-                            <div className="nosomos-container">
-                                <div className="section11">
-                                    <h4>¿QUÉ NO SOMOS?</h4>
-                                    <h2 className="dia">No somos profesionales, pero sabemos lo que hacemos</h2>
-                                    <p>No somos AA, las problemáticas a las que atendemos no se centran únicamente en el consumo de alcohol o drogas, tampoco somos una religión, nuestros miembros son libres de profesar cualquier creencia o credo e incluso de no hacerlo. No somos una secta, si tu llegas a cualquier grupo de Agua Viva, serás bienvenido, y estarás en toda la libertad de elegir ser o no parte de nuestra comunidad. No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimental, Agua Viva tiene más de 20 años en los cuales hemos logrado influir positivamente en la vida de miles de personas.</p>
-                                    <a href="#que-hacemos" className="learn-more-buton">Conocer más</a>
-                                </div>
-                                <div className="section22">
-                                    <img src={bubbles} alt="Bubbles" />
-                                </div>
-                            </div>
-                        </section>
+                        <div className='bubblesectioncontainer'>                     
+                        <Bubbles />
 
                         {/* ----------------------------------------*/}
-
+                        </div>      
 
                         <section className="nueva-section">
                             <div className="nuevavision-container" id="que-hacemos">
