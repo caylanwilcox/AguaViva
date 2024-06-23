@@ -76,7 +76,7 @@ const HomePage = () => {
             });
         });
 
-        const sections = document.querySelectorAll('.fade-in-section');
+        const sections = document.querySelectorAll('.fade-in-left,.fade-in-section, .fade-in-right, .fade-in-bottom');
         sections.forEach(section => {
             observer.observe(section);
         });
@@ -129,8 +129,7 @@ const HomePage = () => {
                                                 "Abandonar tus proyectos por falta de motivación",
                                                 "La angustia de tu apariencia física"
                                             ]}
-                                            speed={50}
-                                            pause={1000}
+                                            speed={100}
                                             loop
                                         />
                                         <br />
@@ -140,13 +139,13 @@ const HomePage = () => {
                                     <div className="contact-container">
                                         <div className="contact-options">
                                             <a href="tel:+1234567890" className="contact-link">
-                                                <div className="contact-option">
+                                                <div className="contact-option fade-in-section">
                                                     <FontAwesomeIcon icon={faWhatsapp} size="4x" className="Path" />
                                                     <h4>Whatsapp</h4>
                                                     <p>Envíanos un Whatsapp</p>
                                                 </div>
                                             </a>
-                                            <div className="contact-option">
+                                            <div className="contact-option fade-in-section">
                                                 <a href="mailto:caylan45@yahoo.com" className="contact-link">
                                                     <FontAwesomeIcon icon={faEnvelope} size="4x" width="100px" className="Path" />
                                                     <h4>Email</h4>
@@ -170,21 +169,21 @@ const HomePage = () => {
                     <div className="info-section">
                         <section className="info-cards-row fade-in-section">
                             <div className="info-card">
-                                <img src={liquor} alt="Alcoholismo y drogadicción" />
+                                <img src={liquor} className='fade-in-section' alt="Alcoholismo y drogadicción" />
                                 <h3>Alcoholismo y drogadicción</h3>
                                 <p>¿Has dejado alguna responsabilidad o proyecto por beber, drogarte o priorizar una relación afectiva?</p>
                                 <p>¿Has bebido o te has drogado al grado de perder la memoria, hacer el ridículo, o tener arranques de violencia?</p>
                                 <p>¿Tu economía se ha visto afectada por tu manera de beber o drogarte?</p>
                             </div>
                             <div className="info-card">
-                                <img src={migraine} alt="Neurosis" />
+                                <img src={migraine} className='fade-in-section'  alt="Neurosis" />
                                 <h3>Neurosis</h3>
                                 <p>¿Frecuentemente piensas que la vida es injusta o que las personas te quieren dañar o que no te aman lo suficiente?</p>
                                 <p>¿Te sientes o las personas a tu alrededor te perciben irritable, de mal humor o enojado constantemente?</p>
                                 <p>¿Te sientes solo aún en momentos en los que estás acompañado?</p>
                             </div>
                             <div className="info-card">
-                                <img src={depression} alt="Depresión y Ansiedad" />
+                                <img src={depression} className='fade-in-section' alt="Depresión y Ansiedad" />
                                 <h3>Depresión y Ansiedad</h3>
                                 <p>¿Vives en estados de vacío emocional en los que sientes que la vida no tiene sentido?</p>
                                 <p>¿Has intentado quitarte la vida o has pensado en hacerlo?</p>
@@ -200,16 +199,16 @@ const HomePage = () => {
                                 <p>¿Sientes miedo antes de comer que puedes llegar al grado de medir exageradamente lo que comes?</p>
                             </div>
                             <div className="info-card2">
-                                <img src={codependency} alt="Codependencia" />
+                                <img src={codependency}  className='fade-in-section'  alt="Codependencia" />
                                 <h3>Codependencia</h3>
                                 <p>Tiendes a hacer cosas con el fin de complacer y obtener aprobación o aceptación de otras personas (tus padres, pareja, amigos, etc).</p>
                                 <p>En tu búsqueda de esta aprobación o aceptación de otros, ¿renuncias a lo que tu anhelas o deseas?</p>
                             </div>
                         </section>
                         <section className='mapContainer fade-in-section'>
-                            <h2>ENCUENTRA TU GRUPO MÁS CERCANO</h2>
-                            <h3>Directorio Agua Viva</h3>
-                            <div className="map-container">
+                            <h2  className='fade-in-section' >ENCUENTRA TU GRUPO MÁS CERCANO</h2>
+                            <h3 className='fade-in-section'>Directorio Agua Viva</h3>
+                            <div className="map-container fade-in-section">
                                 <iframe src="https://www.google.com/maps/d/embed?mid=1GmrFE4RYYe3ZI-zEHVFDaYbjGdq23Tc&ehbc=2E312F&noprof=1" width="940" height="480"></iframe>
                             </div>
                         </section>
@@ -259,49 +258,49 @@ const HomePage = () => {
                         <section className="custom-image-container fade-in-section">
                             <img src={enferm} alt="Background" className="custom-scrolling-image" ref={imgRef} />
                             <div className='custom-overlay-container'>
-                                <div className="custom-content-overlay">
+                                <div className="custom-content-overlay fade-in-bottom">
                                     <h2 id="por-que-lo-hacemos">¿Por qué lo hacemos?</h2>
                                     <p>Nos dimos cuenta de que entregarnos a otros seres humanos sin esperar nada a cambio, nos ayudaba a recuperarnos y mantenernos sobrios un día a la vez.</p>
                                     <a href="#mi-experiencia" id="testimonios" className="custom-btn">Saber más</a>
                                 </div>
                             </div>
                         </section>
-                        <section id="testimonios" className="testimonials-container fade-in-section">
+                        <section id="testimonios" className="testimonials-container">
                             <h2>Comentarios de la Comunidad</h2>
-                            <div className="testimonials-wrapper">
+                            <div className="testimonials-wrapper fade-in-bottom">
                                 <div className="testimonial-box">
                                     <p>Tal como fui enseñado desde que tengo memoria y Agua Viva me ha enfatizado: el bien emana del propio interior de cada uno.</p>
                                     <p>¡Esto me cambió la vida!</p>
                                     <p className="author">Jesús M.</p>
                                 </div>
-                                <div className="testimonial-box highlighted">
+                                <div className="testimonial-box highlighted fade-in-bottom">
                                     <p>Es fácil vivir auto engañados; tener una vida mediocre, trabajar, gastarse el dinero en alcohol para sentirse mejor de nuestra vida, sin arreglar nada, solo provocando momentos esporádicos de felicidad, pero con vacío existencial.</p>
                                     <p>Gracias a que me permití invertir tiempo en mí hoy puedo entenderme mejor y vivir feliz.</p>
                                     <p className="author">Jonathan S.</p>
                                 </div>
-                                <div className="testimonial-box">
+                                <div className="testimonial-box fade-in-bottom">
                                     <p>Gracias a Agua Viva el día de hoy ya no sufro de ataques de ansiedad, pude mantener mi matrimonio, y encontré esa seguridad en mí que me permite construir la vida que siempre quise.</p>
                                     <p className="author">Óscar B.</p>
                                 </div>
                             </div>
                         </section>
-                        <section id="mi-experiencia" className="experience-container fade-in-section">
+                        <section id="mi-experiencia" className="experience-container fade-in-section ">
                             <div className="left-column">
-                                <div className="step">
+                                <div className="step fade-in-right">
                                     <h2>01</h2>
                                     <div>
                                         <h4>IDENTIFICA TU GRUPO MÁS CERCANO</h4>
                                         <p>Hay más de 80 grupos en México y USA, identifica el más cerca a tu casa.</p>
                                     </div>
                                 </div>
-                                <div className="step">
+                                <div className="step fade-in-left">
                                     <h2>02</h2>
                                     <div>
                                         <h4>ASISTE A TUS JUNTAS DE PREPARACIÓN</h4>
                                         <p>Estas son juntas que te van a ayudar a prepararte para vivir tu experiencia.</p>
                                     </div>
                                 </div>
-                                <div className="step">
+                                <div className="step fade-in-right">
                                     <h2>03</h2>
                                     <div>
                                         <h4>VIVE TU EXPERIENCIA</h4>
@@ -312,7 +311,15 @@ const HomePage = () => {
                             <div className="right-column">
                                 <div className="header">
                                     <h2>MI EXPERIENCIA</h2>
-                                    <h1>Es tu momento.</h1>
+                                    <h1>  <TypingEffect
+                                            texts={[
+                                                "Es tu momento.",
+                                                
+                                            ]}
+                                            speed={150}
+                                            pause={100000}
+                                            loop={false}
+                                        /></h1>
                                     <p>Creamos una experiencia vivencial, de intensa reflexión. Generamos un clima propicio para la introspección profunda sobre nuestro pasado y presente con el fin de encontrar respuestas a nuestros problemas actuales.</p>
                                     <a href="tel:+1234567890" className='learn-more-buton'>Comenzar</a>
                                 </div>

@@ -48,14 +48,14 @@ const Bubbles = () => {
     return (
         <section  className="quesomos-section">
             <div id="bubbles-section" className="nosomos-container">
-                <div className="section11">
+                <div className="section11 fade-in-left">
                     <h4 >¿QUÉ NO SOMOS?</h4>
                     <h2 className="dia">No somos profesionales, pero sabemos lo que hacemos</h2>
                     <p>No somos AA, las problemáticas a las que atendemos no se centran únicamente en el consumo de alcohol o drogas, tampoco somos una religión, nuestros miembros son libres de profesar cualquier creencia o credo e incluso de no hacerlo. No somos una secta, si tu llegas a cualquier grupo de Agua Viva, serás bienvenido, y estarás en toda la libertad de elegir ser o no parte de nuestra comunidad. No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimental, Agua Viva tiene más de 20 años en los cuales hemos logrado influir positivamente en la vida de miles de personas.</p>
                     <a href="#que-hacemos" className="learn-more-buton">Conocer más</a>
                 </div>
-                <div className="bubbles-container">
-                    <div className="bubble blue">
+                <div className="bubbles-container fade-in-right ">
+                    <div className="bubble blue ">
                         <div className="bubble-number">0</div>
                         <div className="bubble-text">Más de 35,000 vidas cambiadas</div>
                     </div>

@@ -35,7 +35,7 @@ const TypingEffect = ({ texts, speed, pause, loop }) => {
 TypingEffect.defaultProps = {
     speed: 500,
     loop: true,
-
+pause:100,
 };
 
 export default TypingEffect;
