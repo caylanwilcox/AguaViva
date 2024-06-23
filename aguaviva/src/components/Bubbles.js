@@ -29,7 +29,7 @@ const Bubbles = () => {
                         setStartAnimation(true);
                         document.querySelectorAll('.bubble-number').forEach((bubble, index) => {
                             const endValues = [35000, 80, 20];
-                            animateValue(0, endValues[index], 2000, bubble, index);
+                            animateValue(0, endValues[index], 4000, bubble, index);
                         });
                         observer.disconnect(); // Stop observing after animation starts
                     }
