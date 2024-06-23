@@ -1,0 +1,25 @@
+.nav-elements{
+    display: grid;
+grid-template-columns: 1fr  auto;    
+}
+.hamburger{
+    display: none;
+}
+.nav-menu{
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: repeat(7, auto);
+
+}
+@media (max-width:768px){
+    nav-elements{
+        grid-template-columns: auto auto;
+    }
+    .hamburger{
+        display: block;
+    }
+    .nav-menu{
+        display: none;
+        list-style: none;
+    }
+}

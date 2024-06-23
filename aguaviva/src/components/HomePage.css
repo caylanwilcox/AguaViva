@@ -8,27 +8,12 @@ body {
     ;
    
 }
-.mapContainer{
-    background-color: white;
-    padding:30px;
-    padding-bottom: 80px;
-
-}
-    .mapContainer h2{
-    font-size: 50px;
-    font-family: 'Montserrat', sans-serif !important;
- font-weight: 500 !important;
-margin-bottom: 10px ;
-}
-.mapContainer h3{
-    font-size: 22px;
-    font-family: 'Montserrat', sans-serif !important;
- font-weight: 500 !important;
-}
 
 /* Home Container */
 .home-container {
     background-color:rgb(242, 245, 247);
+    position: relative;
+
 }
 .nav-elements{
     display:flex;
@@ -59,7 +44,6 @@ nav {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    
 }
 
 nav ul {
@@ -148,6 +132,7 @@ width: 100%;
 .info-section {
     padding: 100px 0 60px 0;
     background-color:rgb(242, 245, 247);
+    margin: 0px auto;
 }
 
 .info-cards-row {
@@ -181,6 +166,7 @@ width: 100%;
     margin-top: 20px;
     margin-bottom: 10px;
 }
+/* CSS for fade-in animation */
 
 .info-card2 p {
     font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', sans-serif;
@@ -376,6 +362,24 @@ background-size: cover;
     height: auto;
     margin:  0;
 }
+.mapContainer{
+    background-color: white;
+    padding:30px;
+    padding-bottom: 80px;
+
+}
+    .mapContainer h2{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif !important;
+ font-weight: 500 !important;
+margin-bottom: 10px ;
+}
+.mapContainer h3{
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif !important;
+ font-weight: 500 !important;
+}
+
 .leftsideimage{
 display: flex;
 align-items: flex-end;
@@ -669,7 +673,9 @@ line-height: 58px;
     background-color: #004080; /* Background color on hover */
     padding-right: 30px; /* Increase padding on the right to make space for the arrow */
 }
-
+main{
+    margin-inline: auto;
+}
 .custom-content-overlay .custom-btn:hover::after {
     content: ">"; /* Right arrow character */
     padding-left: 10px;
@@ -1357,7 +1363,7 @@ color:white;
         }
     }
     
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
         .header h1 {
             font-size: 28px;
         }
@@ -1718,7 +1724,8 @@ background-repeat: no-repeat;
     line-height: 24px; /* Line height */
 }
 
-@media (max-width: 900px) {
+
+@media (max-width: 800px) {
     
 .nuevavision-container{
     text-align: left;
@@ -1946,8 +1953,8 @@ font-weight: 600px !important;
     
     }
     
-    @media (max-width: 900px) {
-    
+    @media (max-width: 700px) {
+
         .intro{
             display: flex;
          
@@ -2146,5 +2153,10 @@ font-weight: 600px !important;
         }
         
         }
-  
+        @media (max-width: 355px) {
+    
+            .left-column{
+                max-width: 100%;
+            }
+        }
   

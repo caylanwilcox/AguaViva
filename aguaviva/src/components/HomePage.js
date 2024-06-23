@@ -3,30 +3,50 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import TypingEffect from './TypingEffect'; // Import the TypingEffect component
-
-import './HomePage.css';
+import './reset.css';
 import logo from './logo.png';
 import bg from './bg.png';
-import video from './video.mp4';
-import liquor from './liquor1.webp';
-import depression from './depression-1.webp';
-import codependency from './codependency.webp';
-import migraine from './migraine.webp';
-import eatingDisorder from './eating-disorder.webp';
-import board from './board.png';
-import image from './image.png';
-import nueva from './nueva.png';
-import enferm from './enfermedades.webp';
-import comentarios from './comentarios.png';
-import people from './people.webp';
-import coffee from './undraw_coffee_with_friends_3cbj-1 (1).png';
-import bubbles from './bubbles.png';
+import './HomePage.css';
+import video from '../Images/video.mp4';
+import liquor from '../Images/liquor1.webp';
+import depression from '../Images/depression-1.webp';
+import codependency from '../Images/codependency.webp';
+import migraine from '../Images/migraine.webp';
+import eatingDisorder from '../Images/eating-disorder.webp';
+import board from '../Images/board.png';
+import image from '../Images/image.png';
+import nueva from '../Images/nueva.png';
+import enferm from '../Images/enfermedades.webp';
+import comentarios from '../Images/comentarios.png';
+import people from '../Images/people.webp';
+import coffee from '../Images/undraw_coffee_with_friends_3cbj-1 (1).png';
+import bubbles from '../Images/bubbles.png';
 import Bubbles from './Bubbles'; // Import the Bubbles component
-import searching from './searching-yellow.webp'
+import searching from '../Images/searching-yellow.webp';
+
 const HomePage = () => {
     const videoRef = useRef(null);
     const imgRef = useRef(null);
     const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const playVideo = async () => {
+            if (videoRef.current) {
+                try {
+                    await videoRef.current.play();
+                } catch (error) {
+                    console.log('Error attempting to play', error);
+                }
+            }
+        };
+
+        if (document.readyState === 'complete') {
+            playVideo();
+        } else {
+            window.addEventListener('load', playVideo);
+            return () => window.removeEventListener('load', playVideo);
+        }
+    }, []);
 
     const handleVideoClick = () => {
         if (videoRef.current) {
@@ -46,32 +66,45 @@ const HomePage = () => {
     };
 
     useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('.fade-in-section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    section.classList.add('is-visible');
+                }
+            });
+        };
+
         window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Trigger the scroll handler to check visibility on initial load
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     return (
-        <div className="home-container ">
+        <div className="home-container">
             <header className="head-container">
                 <nav className="nav-elements">
                     <div className="logo-container">
-                        <a href="https://agua-viva-wzaz.vercel.app/"><img src={logo} alt="Agua Viva Logo" className="logo" /></a>
+                        <a href="https://agua-viva-wzaz.vercel.app/">
+                            <img src={logo} alt="Agua Viva Logo" className="logo" />
+                        </a>
                     </div>
                     <button className="hamburger" onClick={toggleMenu}>
                         <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} size="2x" />
                     </button>
                     <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
                         <li><a href="#que-somos">¿Qué somos?</a></li>
-                        <li><a href="#que-no-somos">¿Qué no somos?</a></li>
+                        <li><a href="#bubbles-section">¿Qué no somos?</a></li>
                         <li><a href="#que-hacemos">¿Qué hacemos?</a></li>
                         <li><a href="#por-que-lo-hacemos">¿Por qué lo hacemos?</a></li>
                         <li><a href="#testimonios">Testimonios</a></li>
                         <li><a href="#mi-experiencia">Mi Experiencia</a></li>
                         <li><a href="https://aguaviva.com.mx/">Agua Viva México</a></li>
-
-                    </ul> 
+                    </ul>
                 </nav>
             </header>
 
@@ -96,34 +129,31 @@ const HomePage = () => {
                                         />
                                         <br />
                                         <span> tiene una respuesta </span>
-                                    </h1>                     <p>¿Te vives constantemente en ansiedad, depresión, angustia o frustración?</p>
-                                      <div className="contact-container">
-                                    <div className="contact-options">
-                                        <a href="tel:+1234567890" className="contact-link" >
-
-                                            <div className="contact-option">
-                                                <FontAwesomeIcon icon={faWhatsapp} size="4x" className="Path" />
-                                                <h4>Whatsapp</h4>
-                                                <p>Envíanos un Whatsapp</p>
-                                            </div>
-                                        </a>
-                                        <div className="contact-option">
-                                            <a href="mailto:caylan45@yahoo.com" className="contact-link">
-
-                                                <FontAwesomeIcon icon={faEnvelope} size="4x" width="100px" className="Path" />
-                                                <h4>Email</h4>
-                                                <p>Te contestaremos tan rápido como podamos</p>
+                                    </h1>
+                                    <p>¿Te vives constantemente en ansiedad, depresión, angustia o frustración?</p>
+                                    <div className="contact-container">
+                                        <div className="contact-options">
+                                            <a href="tel:+1234567890" className="contact-link">
+                                                <div className="contact-option">
+                                                    <FontAwesomeIcon icon={faWhatsapp} size="4x" className="Path" />
+                                                    <h4>Whatsapp</h4>
+                                                    <p>Envíanos un Whatsapp</p>
+                                                </div>
                                             </a>
+                                            <div className="contact-option">
+                                                <a href="mailto:caylan45@yahoo.com" className="contact-link">
+                                                    <FontAwesomeIcon icon={faEnvelope} size="4x" width="100px" className="Path" />
+                                                    <h4>Email</h4>
+                                                    <p>Te contestaremos tan rápido como podamos</p>
+                                                </a>
+                                            </div>
                                         </div>
-                                    
+                                    </div>
                                 </div>
                             </div>
-                                </div>
-                                </div>
-                              
                             <div className="right">
                                 <div className="video-container" onClick={handleVideoClick}>
-                                    <video ref={videoRef} className="iphone-video" controls>
+                                    <video ref={videoRef} autoPlay={true} className="iphone-video" controls>
                                         <source src={video} type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
@@ -132,7 +162,7 @@ const HomePage = () => {
                         </section>
                     </div>
                     <div className="info-section">
-                        <section className="info-cards-row fade-in-section" >
+                        <section className="info-cards-row fade-in-section">
                             <div className="info-card">
                                 <img src={liquor} alt="Alcoholismo y drogadicción" />
                                 <h3>Alcoholismo y drogadicción</h3>
@@ -155,7 +185,7 @@ const HomePage = () => {
                                 <p>¿Has abandonado planes o proyectos y no logras retomarlos debido a tu estado emocional?</p>
                             </div>
                         </section>
-                        <section className="info-cards-row">
+                        <section className="info-cards-row fade-in-section">
                             <div className="info-card2">
                                 <img src={eatingDisorder} alt="Trastornos alimenticios" />
                                 <h3>Trastornos alimenticios</h3>
@@ -170,7 +200,7 @@ const HomePage = () => {
                                 <p>En tu búsqueda de esta aprobación o aceptación de otros, ¿renuncias a lo que tu anhelas o deseas?</p>
                             </div>
                         </section>
-                        <section className='mapContainer' >
+                        <section className='mapContainer fade-in-section'>
                             <h2>ENCUENTRA TU GRUPO MÁS CERCANO</h2>
                             <h3>Directorio Agua Viva</h3>
                             <div className="map-container">
@@ -178,8 +208,7 @@ const HomePage = () => {
                             </div>
                         </section>
 
-
-                        <section id="que-somos" className="quesomos-section">
+                        <section id="que-somos" className="quesomos-section fade-in-section">
                             <div className="quesomos-container">
                                 <div className="section11">
                                     <h2>Un día a la vez</h2>
@@ -189,11 +218,8 @@ const HomePage = () => {
                                         <div className="textcolum">
                                             <h4>PARA PERSONAS ENTRE 13 Y 70 AÑOS </h4>
                                             <p>No importa tu clase social, etnia, creencia, religión o partido político.</p>
-
                                         </div>
-                                        
                                         <a href="#que-no-somos" className="learn-more-button">Conocer más</a>
-
                                     </div>
                                 </div>
                                 <div className="section22">
@@ -202,48 +228,39 @@ const HomePage = () => {
                             </div>
                         </section>
 
-                        {/* ----------------------------------------*/}
-                        <div className='bubblesectioncontainer'>                     
-                        <Bubbles />
-
-                        {/* ----------------------------------------*/}
+                        <div className='bubblesectioncontainer fade-in-section'>                     
+                            <Bubbles />
                         </div>      
 
-                        <section className="nueva-section">
+                        <section className="nueva-section fade-in-section">
                             <div className="nuevavision-container" id="que-hacemos">
                                 <div className='leftside'>
-                            <div className='span-hacemos'>¿QUÉ HACEMOS? </div>
-                            
-                            <div className='leftsideimage' >
-                                    <img src={searching} alt="woman-searching" />
-                                </div>
-                                </div>
-                                <div className="section11">
-                                    <h2>Una nueva visión </h2>    
-                                    <p>Nuestro método está basado en revisar áreas específicas de nuestra personalidad con la finalidad de encontrar solución a nuestros problemas actuales, encontrando su origen en nuestro pasado, teniendo como resultado de esta experiencia una mejor comprensión de nuestro pasado, un mejor entendimiento de nuestro presente y una postura distinta para afrontar el futuro.</p>                                   
-                                 
-                                        <div className='quehacemos button'>
-                                        <a href="#por-que-lo-hacemos" className="learn-more-buton">Conocer más</a>
-                                      
+                                    <div className='span-hacemos'>¿QUÉ HACEMOS? </div>
+                                    <div className='leftsideimage'>
+                                        <img src={searching} alt="woman-searching" />
                                     </div>
                                 </div>
-                                
-                            </div>
-                        </section>
-
-
-
-                        <section id="por-que-lo-hacemos" className="custom-image-container">
-                            <img src={enferm} alt="Background" className="custom-scrolling-image" ref={imgRef} />
-                            <div className='custom-overlay-container'>
-                            <div className="custom-content-overlay">
-                                <h2>¿Por qué lo hacemos?</h2>
-                                <p>Nos dimos cuenta de que entregarnos a otros seres humanos sin esperar nada a cambio, nos ayudaba a recuperarnos y mantenernos sobrios un día a la vez.</p>
-                                <a href="#mi-experiencia" id="testimonios" className="custom-btn">Saber más</a>
+                                <div className="section11">
+                                    <h2>Una nueva visión</h2>
+                                    <p>Nuestro método está basado en revisar áreas específicas de nuestra personalidad con la finalidad de encontrar solución a nuestros problemas actuales, encontrando su origen en nuestro pasado, teniendo como resultado de esta experiencia una mejor comprensión de nuestro pasado, un mejor entendimiento de nuestro presente y una postura distinta para afrontar el futuro.</p>
+                                    <div className='quehacemos button'>
+                                        <a href="#por-que-lo-hacemos" className="learn-more-buton">Conocer más</a>
+                                    </div>
                                 </div>
                             </div>
                         </section>
-                        <section className="testimonials-container">
+
+                        <section className="custom-image-container fade-in-section">
+                            <img src={enferm} alt="Background" className="custom-scrolling-image" ref={imgRef} />
+                            <div className='custom-overlay-container'>
+                                <div className="custom-content-overlay">
+                                    <h2 id="por-que-lo-hacemos">¿Por qué lo hacemos?</h2>
+                                    <p>Nos dimos cuenta de que entregarnos a otros seres humanos sin esperar nada a cambio, nos ayudaba a recuperarnos y mantenernos sobrios un día a la vez.</p>
+                                    <a href="#mi-experiencia" id="testimonios" className="custom-btn">Saber más</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="testimonios" className="testimonials-container fade-in-section">
                             <h2>Comentarios de la Comunidad</h2>
                             <div className="testimonials-wrapper">
                                 <div className="testimonial-box">
@@ -262,7 +279,7 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </section>
-                        <section id="mi-experiencia" className="experience-container">
+                        <section id="mi-experiencia" className="experience-container fade-in-section">
                             <div className="left-column">
                                 <div className="step">
                                     <h2>01</h2>
@@ -291,7 +308,7 @@ const HomePage = () => {
                                     <h2>MI EXPERIENCIA</h2>
                                     <h1>Es tu momento.</h1>
                                     <p>Creamos una experiencia vivencial, de intensa reflexión. Generamos un clima propicio para la introspección profunda sobre nuestro pasado y presente con el fin de encontrar respuestas a nuestros problemas actuales.</p>
-                                    <a href="tel:+1234567890" className='learn-more-buton' >Comenzar</a>
+                                    <a href="tel:+1234567890" className='learn-more-buton'>Comenzar</a>
                                 </div>
                             </div>
                         </section>
@@ -301,13 +318,13 @@ const HomePage = () => {
                             <h2>Siempre habrá alguien para escucharte. Ya no estás solo.</h2>
                             <div className="contacts">
                                 <a href="tel:+1234567890" className="contact-link">
-
                                     <div className="contact">
                                         <FontAwesomeIcon className="icon" icon={faWhatsapp} size="4x" />
                                         <span>Whatsapp</span>
                                         <p>Envíanos un Whatsapp</p>
                                     </div>
-                                </a>                              <div className="contact">
+                                </a>
+                                <div className="contact">
                                     <a href="mailto:caylan45@yahoo.com" className="contact-link">
                                         <FontAwesomeIcon className="icon" icon={faEnvelope} size="4x" />
                                         <span>Email</span>
