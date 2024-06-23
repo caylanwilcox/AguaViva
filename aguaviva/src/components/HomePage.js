@@ -66,23 +66,29 @@ const HomePage = () => {
     };
 
     useEffect(() => {
-        const handleScroll = () => {
-            const sections = document.querySelectorAll('.fade-in-section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    section.classList.add('is-visible');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');
                 }
             });
-        };
+        });
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Trigger the scroll handler to check visibility on initial load
+        const sections = document.querySelectorAll('.fade-in-section');
+        sections.forEach(section => {
+            observer.observe(section);
+        });
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            sections.forEach(section => {
+                observer.unobserve(section);
+            });
         };
     }, []);
+
+
 
     return (
         <div className="home-container">
