@@ -323,7 +323,7 @@ const HomePage = () => {
                                             loop={false}
                                         /></h1>
                                     <p>Creamos una experiencia vivencial, de intensa reflexión. Generamos un clima propicio para la introspección profunda sobre nuestro pasado y presente con el fin de encontrar respuestas a nuestros problemas actuales.</p>
-                                    <a href="tel:+1234567890" className='learn-more-buton'>Comenzar</a>
+                                    <a href="tel:+6306868879" className='learn-more-buton'>Comenzar</a>
                                 </div>
                             </div>
                         </section>
