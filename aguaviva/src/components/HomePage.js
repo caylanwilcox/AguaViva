@@ -5,7 +5,8 @@ import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import TypingEffect from './TypingEffect'; // Import the TypingEffect component
 import './reset.css';
 import logo from './logo.png';
-import bg from './bg.png';
+import bg from './Unt3.png';
+
 import './HomePage.css';
 import video from '../Images/video.mp4';
 import liquor from '../Images/liquor1.webp';
@@ -19,11 +20,11 @@ import nueva from '../Images/nueva.png';
 import enferm from '../Images/enfermedades.webp';
 import comentarios from '../Images/comentarios.png';
 import people from '../Images/people.webp';
-import coffee from '../Images/undraw_coffee_with_friends_3cbj-1 (1).png';
+import coffee from '../Images/2geth.png';
 import bubbles from '../Images/bubbles.png';
 import Bubbles from './Bubbles'; // Import the Bubbles component
-import searching from '../Images/searching-yellow.webp';
-
+import searching from '../Images/visionary.png';
+import house from '../Images/bbh.png';
 const HomePage = () => {
     const videoRef = useRef(null);
     const imgRef = useRef(null);
@@ -116,6 +117,7 @@ const HomePage = () => {
 
             <main>
                 <div className="background-image" style={{ backgroundImage: `url(${bg})` }}>
+                    
                     <div className="content-wrapper">
                         <section id="intro" className="intro fade-in-section">
                             <div className="left">
@@ -242,7 +244,7 @@ const HomePage = () => {
                                 <div className='leftside'>
                                     <div className='span-hacemos'>¿QUÉ HACEMOS? </div>
                                     <div className='leftsideimage'>
-                                        <img src={searching} alt="woman-searching" />
+                                        <img src={searching} alt="woman-searching" className='searching'/>
                                     </div>
                                 </div>
                                 <div className="section11">
