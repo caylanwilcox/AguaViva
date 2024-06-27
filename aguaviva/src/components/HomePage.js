@@ -140,7 +140,7 @@ const HomePage = () => {
                                     <p>¿Te vives constantemente en ansiedad, depresión, angustia o frustración?</p>
                                     <div className="contact-container">
                                         <div className="contact-options">
-                                            <a href="tel:+1234567890" className="contact-link">
+                                            <a href="tel:+6306868879" className="contact-link">
                                                 <div className="contact-option fade-in-section">
                                                     <FontAwesomeIcon icon={faWhatsapp} size="4x" className="Path" />
                                                     <h4>Whatsapp</h4>
@@ -148,7 +148,7 @@ const HomePage = () => {
                                                 </div>
                                             </a>
                                             <div className="contact-option fade-in-section">
-                                                <a href="mailto:caylan45@yahoo.com" className="contact-link">
+                                                <a href="mailto:ayuda@aguavivausa.org" className="contact-link">
                                                     <FontAwesomeIcon icon={faEnvelope} size="4x" width="100px" className="Path" />
                                                     <h4>Email</h4>
                                                     <p>Te contestaremos tan rápido como podamos</p>
@@ -332,7 +332,7 @@ const HomePage = () => {
                         <div className="footer-content">
                             <h2>Siempre habrá alguien para escucharte. Ya no estás solo.</h2>
                             <div className="contacts">
-                                <a href="tel:+1234567890" className="contact-link">
+                                <a href="tel:+6306868879" className="contact-link">
                                     <div className="contact">
                                         <FontAwesomeIcon className="icon" icon={faWhatsapp} size="4x" />
                                         <span>Whatsapp</span>
@@ -340,7 +340,7 @@ const HomePage = () => {
                                     </div>
                                 </a>
                                 <div className="contact">
-                                    <a href="mailto:caylan45@yahoo.com" className="contact-link">
+                                    <a href="mailto:ayuda@aguavivausa.org" className="contact-link">
                                         <FontAwesomeIcon className="icon" icon={faEnvelope} size="4x" />
                                         <span>Email</span>
                                         <p>Te contestaremos<br />tan rápido como podamos</p>
@@ -349,12 +349,16 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div className="footer-bottom">
-                            <p>Copyright © 2023 Agua Viva Grupos Anónimos de Autoayuda</p>
-                            <div className="social-icons">
-                                <FontAwesomeIcon className="facebook" icon={faFacebook} size="2x" />
-                                <FontAwesomeIcon className="instagram" icon={faInstagram} size="2x" />
-                            </div>
-                        </div>
+            <p>Copyright © 2023 Agua Viva Grupos Anónimos de Autoayuda</p>
+            <div className="social-icons">
+                <a href="https://www.facebook.com/p/Agua-Viva-Illinois-100080310360194/" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon className="facebook" icon={faFacebook} size="2x" />
+                </a>
+                <a href="https://www.instagram.com/agua_viva_ip" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon className="instagram" icon={faInstagram} size="2x" />
+                </a>
+            </div>
+        </div>
                     </footer>
                 </div>
             </main>
