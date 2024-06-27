@@ -250,6 +250,7 @@ color: rgb(0, 0, 0);
     cursor:pointer;
     top:120px;
     left:135px;
+    background-image: url('logo.png'); /* Replace with your image path */
     background-repeat: no-repeat;
     background-position: center;
 background-size: contain;

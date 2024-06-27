@@ -5,7 +5,7 @@ import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import TypingEffect from './TypingEffect'; // Import the TypingEffect component
 import './reset.css';
 import logo from './logo.png';
-import bg from './Unt3.png';
+import bg from './bg.png';
 
 import './HomePage.css';
 import video from '../Images/video.mp4';
