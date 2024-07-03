@@ -5,7 +5,8 @@ import { faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import TypingEffect from './TypingEffect'; // Import the TypingEffect component
 import './reset.css';
 import logo from './logo.png';
-import bg from './dd.png';
+import bg from './untile.png';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import './HomePage.css';
 import video from '../Images/video.mp4';
@@ -140,7 +141,7 @@ const HomePage = () => {
                                     <p>¿Te vives constantemente en ansiedad, depresión, angustia o frustración?</p>
                                     <div className="contact-container">
                                         <div className="contact-options">
-                                            <a href="tel:+6306868879" className="contact-link">
+                                            <a href="tel:+1(779)248-1169" className="contact-link">
                                                 <div className="contact-option fade-in-section">
                                                     <FontAwesomeIcon icon={faWhatsapp} size="4x" className="Path" />
                                                     <h4>Whatsapp</h4>
@@ -258,7 +259,7 @@ const HomePage = () => {
                         </section>
 
                         <section className="custom-image-container fade-in-section">
-                            <img src={enferm} alt="Background" className="custom-scrolling-image" ref={imgRef} />
+                            <img src={enferm} alt ="Background" className="custom-scrolling-image" ref={imgRef} />
                             <div className='custom-overlay-container'>
                                 <div className="custom-content-overlay fade-in-bottom">
                                     <h2 id="por-que-lo-hacemos">¿Por qué lo hacemos?</h2>
@@ -323,7 +324,7 @@ const HomePage = () => {
                                             loop={false}
                                         /></h1>
                                     <p>Creamos una experiencia vivencial, de intensa reflexión. Generamos un clima propicio para la introspección profunda sobre nuestro pasado y presente con el fin de encontrar respuestas a nuestros problemas actuales.</p>
-                                    <a href="tel:+6306868879" className='learn-more-buton'>Comenzar</a>
+                                    <a href="tel:+6306868599" className='learn-more-buton'>Comenzar</a>
                                 </div>
                             </div>
                         </section>
@@ -332,8 +333,8 @@ const HomePage = () => {
                         <div className="footer-content">
                             <h2>Siempre habrá alguien para escucharte. Ya no estás solo.</h2>
                             <div className="contacts">
-                                <a href="tel:+6306868879" className="contact-link">
-                                    <div className="contact">
+                            <a href="tel:+1(779)248-1169" className="contact-link">
+                            <div className="contact">
                                         <FontAwesomeIcon className="icon" icon={faWhatsapp} size="4x" />
                                         <span>Whatsapp</span>
                                         <p>Envíanos un Whatsapp</p>
@@ -357,6 +358,9 @@ const HomePage = () => {
                 <a href="https://www.instagram.com/agua_viva_ip" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="instagram" icon={faInstagram} size="2x" />
                 </a>
+                <a href="tel:630-686-8599" rel="noopener noreferrer">
+      <FontAwesomeIcon className="phone-icon" icon={faPhone} />
+    </a>
             </div>
         </div>
                     </footer>

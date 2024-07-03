@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background-color:rgb(242, 245, 247);
+    background-color:#F7F7F7;
     ;
     overflow-x: hidden;
 }
@@ -250,7 +250,6 @@ color: rgb(0, 0, 0);
     cursor:pointer;
     top:120px;
     left:135px;
-    background-image: url('logo.png'); /* Replace with your image path */
     background-repeat: no-repeat;
     background-position: center;
 background-size: contain;
@@ -1152,6 +1151,11 @@ color:white;
     font-size: 18px;
     font-weight: 600;
 }
+.phone-icon {
+    font-size: 1.4rem; /* Adjust the size as needed */
+    margin-top: .2rem;
+    margin-left: 0;
+  }
     .contacts .icon{
         
         color:gold;
