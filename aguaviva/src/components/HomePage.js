@@ -352,9 +352,7 @@ const HomePage = () => {
                         <div className="footer-bottom">
             <p>Copyright © 2023 Agua Viva Grupos Anónimos de Autoayuda</p>
             <div className="social-icons">
-                <a href="https://www.facebook.com/p/Agua-Viva-Illinois-100080310360194/" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon className="facebook" icon={faFacebook} size="2x" />
-                </a>
+              
                 <a href="https://www.instagram.com/agua_viva_ip" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="instagram" icon={faInstagram} size="2x" />
                 </a>
