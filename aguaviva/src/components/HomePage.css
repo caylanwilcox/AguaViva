@@ -246,10 +246,13 @@ color: rgb(0, 0, 0);
     border-radius: 36px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    background-color: rgb(251, 251, 251);
     position: relative;
     cursor:pointer;
     top:120px;
     left:135px;
+    background-image: url('logo.png'); /* Replace with your image path */
+
     background-repeat: no-repeat;
     background-position: center;
 background-size: contain;
