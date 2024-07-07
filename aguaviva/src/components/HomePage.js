@@ -356,6 +356,9 @@ const HomePage = () => {
                 <a href="https://www.instagram.com/agua_viva_ip" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="instagram" icon={faInstagram} size="2x" />
                 </a>
+                <a href="https://www.facebook.com/aguavivaosgr7/" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon className="facebook" icon={faFacebook} size="2x" />
+                </a>
                 <a href="tel:630-686-8599" rel="noopener noreferrer">
       <FontAwesomeIcon className="phone-icon" icon={faPhone} />
     </a>
