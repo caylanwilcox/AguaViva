@@ -51,7 +51,7 @@ font-weight: 300;
 }
 
 .bubble.blue {
-    background-color: #0055A5;
+    background-color: #dc2626;
     color: white;
     padding: 10px;
     width: 300px;
@@ -59,11 +59,11 @@ font-weight: 300;
     top: -20%;
     left: 50%;
     transform: translateX(-50%);
-    
+
 }
 
 .bubble.light-blue {
-    background-color: #73B0E1;
+    background-color: #7c3aed;
     color: white;
     width: 250px;
     height: 200px;
@@ -73,8 +73,8 @@ font-weight: 300;
 }
 
 .bubble.beige {
-    background-color: #F5DEB3;
-    color: #333;
+    background-color: #000000;
+    color: #ffffff;
     width: 180px;
     height: 180px;
     top: 250px;
@@ -84,52 +84,86 @@ font-weight: 300;
 
 /* Media query for smaller viewports */
 @media (max-width: 768px) {
-    .nosomos-container{
-        flex-direction: column;
-        margin-left: -100px;
-    }
-    .section11{
+    .bubbles-section {
         width: 100%;
-        margin: auto;
+        padding: 20px 10px;
+        display: flex;
+        justify-content: center;
     }
+
+    .nosomos-container {
+        flex-direction: column;
+        margin-left: 0;
+        padding: 20px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .section11 {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .bubbles-container {
         height: auto;
         display: flex;
         flex-direction: column;
-        margin:auto;
+        align-items: center;
+        margin: 0 auto;
         justify-content: center;
-        left: 20%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-
+        left: auto;
+        right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 0;
     }
 
     .bubble {
         position: relative;
         width: 100%;
-        max-width: 300px;
-        margin: 10px 0;
-        transform: none;
+        max-width: 280px;
+        margin: 10px auto;
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
     }
 
     .bubble.blue {
         top: 0;
-        left: 80px;
-        width: 300px;
-    padding: 0;
+        left: auto !important;
+        right: auto !important;
+        width: 100%;
+        max-width: 280px;
+        padding: 10px;
     }
 
     .bubble.light-blue {
         top: 0;
-        left: 23px;
-        width: 300px;
+        left: auto !important;
+        right: auto !important;
+        width: 100%;
+        max-width: 280px;
     }
 
     .bubble.beige {
         top: 0;
-        left: 140px;  
-        width: 300px;
-        margin-bottom: 80px;
+        left: auto !important;
+        right: auto !important;
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 40px;
+    }
+
+    .bubble-number {
+        font-size: 48px;
+    }
+
+    .bubble-text {
+        font-size: 14px;
     }
 }
 

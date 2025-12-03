@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './Bubbles.css';
 
 const Bubbles = () => {
+    const { t } = useLanguage();
     const [startAnimation, setStartAnimation] = useState(false);
 
     const animateValue = (start, end, duration, element, index) => {
@@ -21,14 +23,14 @@ const Bubbles = () => {
 
     useEffect(() => {
         const bubblesSection = document.getElementById('bubbles-section');
-        
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting && !startAnimation) {
                         setStartAnimation(true);
                         document.querySelectorAll('.bubble-number').forEach((bubble, index) => {
-                            const endValues = [35000, 80, 20];
+                            const endValues = [15000, 7, 19];
                             animateValue(0, endValues[index], 4000, bubble, index);
                         });
                         observer.disconnect(); // Stop observing after animation starts
@@ -46,26 +48,26 @@ const Bubbles = () => {
     }, [startAnimation]);
 
     return (
-        <section  className="quesomos-section">
+        <section className="quesomos-section" id="que-no-somos">
             <div id="bubbles-section" className="nosomos-container">
                 <div className="section11 fade-in-left">
-                    <h4 >¿QUÉ NO SOMOS?</h4>
-                    <h2 className="dia">No somos profesionales, pero sabemos lo que hacemos</h2>
-                    <p>No somos AA, las problemáticas a las que atendemos no se centran únicamente en el consumo de alcohol o drogas, tampoco somos una religión, nuestros miembros son libres de profesar cualquier creencia o credo e incluso de no hacerlo. No somos una secta, si tu llegas a cualquier grupo de Agua Viva, serás bienvenido, y estarás en toda la libertad de elegir ser o no parte de nuestra comunidad. No somos profesionales y no pretendemos serlo, nuestro trabajo no es experimental, Agua Viva tiene más de 20 años en los cuales hemos logrado influir positivamente en la vida de miles de personas.</p>
-                    <a href="#que-hacemos" className="learn-more-buton">Conocer más</a>
+                    <h4>{t('queNoSomosTitle')}</h4>
+                    <h2 className="dia">{t('queNoSomosSubtitle')}</h2>
+                    <p>{t('queNoSomosText')}</p>
+                    <a href="#que-hacemos" className="learn-more-buton">{t('learnMore')}</a>
                 </div>
                 <div className="bubbles-container fade-in-right ">
                     <div className="bubble blue ">
                         <div className="bubble-number">0</div>
-                        <div className="bubble-text">Más de 35,000 vidas cambiadas</div>
+                        <div className="bubble-text">{t('bubble1Text')}</div>
                     </div>
                     <div className="bubble light-blue">
                         <div className="bubble-number">0</div>
-                        <div className="bubble-text">Más de 80 grupos entre México y Estados Unidos</div>
+                        <div className="bubble-text">{t('bubble2Text')}</div>
                     </div>
                     <div className="bubble beige">
                         <div className="bubble-number">0</div>
-                        <div className="bubble-text">Más de 20 años de funcionamiento</div>
+                        <div className="bubble-text">{t('bubble3Text')}</div>
                     </div>
                 </div>
             </div>
