@@ -152,7 +152,7 @@ const HomePage = () => {
                             </div>
                             <div className="hero-stats">
                                 <div className="hero-stat">
-                                    <span className="hero-stat-number">7+</span>
+                                    <span className="hero-stat-number">IL & MS</span>
                                     <span className="hero-stat-label">{t('heroStat1Label')}</span>
                                 </div>
                                 <div className="hero-stat-divider"></div>
