@@ -70,6 +70,7 @@ export const translations = {
     footerEmail: "Email",
     footerEmailText: "We will respond as quickly as we can",
     footerCopyright: "Copyright © 2023 Fuego de Vida Anonymous Self-Help Groups",
+    emailAddress: "help@fuegodevidausa.org",
     // Que no somos section (Bubbles)
     queNoSomosTitle: "WHAT ARE WE NOT?",
     queNoSomosSubtitle: "We are not professionals, but we know what we do",

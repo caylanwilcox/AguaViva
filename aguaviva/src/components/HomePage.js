@@ -145,7 +145,7 @@ const HomePage = () => {
                                     <FontAwesomeIcon icon={faWhatsapp} className="hero-cta-icon" />
                                     {t('heroWhatsapp')}
                                 </a>
-                                <a href="mailto:ayuda@aguavivausa.org" className="hero-cta-secondary">
+                                <a href="mailto:ayuda@fuegodevidausa.org" className="hero-cta-secondary">
                                     <FontAwesomeIcon icon={faEnvelope} className="hero-cta-icon" />
                                     {t('heroEmail')}
                                 </a>
@@ -362,7 +362,7 @@ const HomePage = () => {
                                     </div>
                                 </a>
                                 <div className="contact">
-                                    <a href="mailto:ayuda@aguavivausa.org" className="contact-link">
+                                    <a href="mailto:ayuda@fuegodevidausa.org" className="contact-link">
                                         <FontAwesomeIcon className="icon" icon={faEnvelope} size="4x" />
                                         <span>{t('footerEmail')}</span>
                                         <p>{t('footerEmailText')}</p>
