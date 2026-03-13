@@ -345,7 +345,7 @@ const HomePage = () => {
                                         />
                                     </h1>
                                     <p>{t('expDescription')}</p>
-                                    <a href="tel:+6306868599" className='learn-more-buton'>{t('expStart')}</a>
+                                    <a href="tel:+6306868879" className='learn-more-buton'>{t('expStart')}</a>
                                 </div>
                             </div>
                         </section>
@@ -379,7 +379,7 @@ const HomePage = () => {
                                 <a href="https://www.facebook.com/aguavivaosgr7/" target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon className="facebook" icon={faFacebook} size="2x" />
                                 </a>
-                                <a href="tel:630-686-8599" rel="noopener noreferrer">
+                                <a href="tel:630-686-8879" rel="noopener noreferrer">
                                     <FontAwesomeIcon className="phone-icon" icon={faPhone} />
                                 </a>
                             </div>
